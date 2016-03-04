@@ -1,0 +1,23 @@
+METAPOPULATION MODEL results; Date=17/06/2014 Time=10:08:14
+===========================================================
+
+
+
+
+
+    1 populations (1 included in summation)
+  100 replications;  Duration = 100
+===========================================================
+
+Interval extinction risk
+
+Expected minimum abundance = 0.4
+
+ Threshold  Probability     95% confidence interval
+         0       0.8100          0.7214   0.8986
+         1       0.9000          0.8114   0.9886
+         2       0.9600          0.8714   1.0000
+         3       0.9800          0.8914   1.0000
+         4       0.9900          0.9014   1.0000
+         5       0.9900          0.9014   1.0000
+         6       1.0000          0.9114   1.0000

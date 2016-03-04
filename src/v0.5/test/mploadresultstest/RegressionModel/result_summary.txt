@@ -1,0 +1,8 @@
+GLM model summaries for EMA, FinalN, and Ext.
+See 'keys.txt' for full input and output parameter names.
+
+Error generating GLM for EMA: Perfect separation detected, results not available
+
+Error generating GLM for FinalN: Perfect separation detected, results not available
+
+Error generating GLM for Ext: Perfect separation detected, results not available
