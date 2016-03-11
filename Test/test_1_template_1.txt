@@ -1,0 +1,33 @@
+Blah...
+
+Single value:
+${single_1_0} # comment 1.1
+${single_2_0}, # comment 1.2
+${single_3_0} # comment 1.3
+
+Single row matrix:
+${single_row_1_0}, # comment 2.1
+${single_row_2_0} # comment 2.2
+other ${single_row_3_0}
+
+Single column matrix:
+${single_column_1_0},${single_column_2_0},other,${single_column_3_0}, # comment 3.1
+${single_column_1_1},${single_column_2_1},other,${single_column_3_1} # comment 3.2
+other,${single_column_2_2},other,${single_column_3_2}
+other ${single_column_4_0} 
+other ${single_column_4_1}
+
+Matrices:
+
+${Matrix_1_0} # comment 4
+${Matrix_1_1} 
+${Matrix_1_2}
+
+---space
+
+other,${Matrix_2_0}, # comment 5
+other,${Matrix_2_1} 
+other,${Matrix_2_2} 
+other,${Matrix_2_3}
+
+end

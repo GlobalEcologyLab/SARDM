@@ -1,6 +1,0 @@
-Modified MP file                   Initial           Rmax       Carrying      Dispersal      Fecundity       Survival  
-                                 Abundance                      Capacity         Matrix          Rates          Rates  
-                                                                                                                       
-SandLizard_1_modified_0001.mp          160          1.112           2336          99.7%         101.1%         100.2%  
-SandLizard_1_modified_0002.mp          160          1.045           2464         102.9%          98.2%          96.2%  
-SandLizard_1_modified_0003.mp          168          1.145           2440          97.3%         104.2%         104.4%  

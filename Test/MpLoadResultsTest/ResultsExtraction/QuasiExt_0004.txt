@@ -1,0 +1,46 @@
+METAPOPULATION MODEL results; Date=17/05/2014 Time=21:31:26
+===========================================================
+Sandlizard8Pop20IntroYr0-2Disp10x
+Sand lizard, site FL-data, scen. II in Berglind, S-A. 2000. Ecol. Bull. 48: 123-142,  8 populations, 5 ha each, 
+contest density dependence, K = 60 females/ha (incl. hatchlings) x 5 ha = 300, density dependent dispersal, 
+initial pop. size (yr 0) = 20 (introduced) 0-yr olds, introduction of 0-yr olds during yr 1-2, ca 10 times higher 
+dispersal rate than the basic model. ## MODIFIED BY DF ON THE 20/07/2013 FOR SENSITIVITY ANALYSIS EXAMPLE
+    8 populations (8 included in summation)
+  100 replications;  Duration = 30
+===========================================================
+
+Time to quasi-extinction (Threshold level = 80.0)
+
+Median time = 2.7 timestep(s)
+
+      Time  Probability  Cumulative Probability     95% confidence interval
+         1       0.0000          0.0000          0.0000   0.0886
+         2       0.0000          0.0000          0.0000   0.0886
+         3       0.6900          0.6900          0.6014   0.7786
+         4       0.0300          0.7200          0.6314   0.8086
+         5       0.0100          0.7300          0.6414   0.8186
+         6       0.0400          0.7700          0.6814   0.8586
+         7       0.0300          0.8000          0.7114   0.8886
+         8       0.0300          0.8300          0.7414   0.9186
+         9       0.0500          0.8800          0.7914   0.9686
+        10       0.0000          0.8800          0.7914   0.9686
+        11       0.0200          0.9000          0.8114   0.9886
+        12       0.0000          0.9000          0.8114   0.9886
+        13       0.0200          0.9200          0.8314   1.0000
+        14       0.0200          0.9400          0.8514   1.0000
+        15       0.0100          0.9500          0.8614   1.0000
+        16       0.0100          0.9600          0.8714   1.0000
+        17       0.0200          0.9800          0.8914   1.0000
+        18       0.0000          0.9800          0.8914   1.0000
+        19       0.0000          0.9800          0.8914   1.0000
+        20       0.0000          0.9800          0.8914   1.0000
+        21       0.0100          0.9900          0.9014   1.0000
+        22       0.0000          0.9900          0.9014   1.0000
+        23       0.0100          1.0000          0.9114   1.0000
+        24       0.0000          1.0000          0.9114   1.0000
+        25       0.0000          1.0000          0.9114   1.0000
+        26       0.0000          1.0000          0.9114   1.0000
+        27       0.0000          1.0000          0.9114   1.0000
+        28       0.0000          1.0000          0.9114   1.0000
+        29       0.0000          1.0000          0.9114   1.0000
+        30       0.0000          1.0000          0.9114   1.0000

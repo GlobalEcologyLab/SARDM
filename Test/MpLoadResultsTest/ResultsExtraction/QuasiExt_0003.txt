@@ -1,0 +1,46 @@
+METAPOPULATION MODEL results; Date=17/05/2014 Time=21:12:34
+===========================================================
+Sandlizard8Pop20IntroYr0-2Disp10x
+Sand lizard, site FL-data, scen. II in Berglind, S-A. 2000. Ecol. Bull. 48: 123-142,  8 populations, 5 ha each, 
+contest density dependence, K = 60 females/ha (incl. hatchlings) x 5 ha = 300, density dependent dispersal, 
+initial pop. size (yr 0) = 20 (introduced) 0-yr olds, introduction of 0-yr olds during yr 1-2, ca 10 times higher 
+dispersal rate than the basic model. ## MODIFIED BY DF ON THE 20/07/2013 FOR SENSITIVITY ANALYSIS EXAMPLE
+    8 populations (8 included in summation)
+  100 replications;  Duration = 30
+===========================================================
+
+Time to quasi-extinction (Threshold level = 80.0)
+
+Median time > 30 timesteps
+
+      Time  Probability  Cumulative Probability     95% confidence interval
+         1       0.0000          0.0000          0.0000   0.0886
+         2       0.0000          0.0000          0.0000   0.0886
+         3       0.0000          0.0000          0.0000   0.0886
+         4       0.0000          0.0000          0.0000   0.0886
+         5       0.0000          0.0000          0.0000   0.0886
+         6       0.0000          0.0000          0.0000   0.0886
+         7       0.0000          0.0000          0.0000   0.0886
+         8       0.0000          0.0000          0.0000   0.0886
+         9       0.0000          0.0000          0.0000   0.0886
+        10       0.0000          0.0000          0.0000   0.0886
+        11       0.0000          0.0000          0.0000   0.0886
+        12       0.0000          0.0000          0.0000   0.0886
+        13       0.0000          0.0000          0.0000   0.0886
+        14       0.0000          0.0000          0.0000   0.0886
+        15       0.0000          0.0000          0.0000   0.0886
+        16       0.0000          0.0000          0.0000   0.0886
+        17       0.0000          0.0000          0.0000   0.0886
+        18       0.0000          0.0000          0.0000   0.0886
+        19       0.0000          0.0000          0.0000   0.0886
+        20       0.0000          0.0000          0.0000   0.0886
+        21       0.0000          0.0000          0.0000   0.0886
+        22       0.0000          0.0000          0.0000   0.0886
+        23       0.0000          0.0000          0.0000   0.0886
+        24       0.0000          0.0000          0.0000   0.0886
+        25       0.0000          0.0000          0.0000   0.0886
+        26       0.0000          0.0000          0.0000   0.0886
+        27       0.0000          0.0000          0.0000   0.0886
+        28       0.0000          0.0000          0.0000   0.0886
+        29       0.0000          0.0000          0.0000   0.0886
+        30       0.0000          0.0000          0.0000   0.0886
