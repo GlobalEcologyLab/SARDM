@@ -1,6 +1,6 @@
 MKDIR original
 COPY *.mp original
-START /WAIT "R_SAM" "C:\Program Files\RAMASGIS\Metapop.exe" "SandLizard_1_modified_0001.mp" /RUN=YES /TEX
+START /WAIT "R_SAM" "H:\La Trobe Lecturing\Collaborations\GlobalEcologyGroup-Lab\RAMAS-Metapop\Metapop.exe" "SandLizard_1_modified_0001.mp" /RUN=YES /TEX
 RENAME Abund.txt Abund_0001.txt
 RENAME FinalStageN.txt FinalStageN_0001.txt
 RENAME Harvest.txt Harvest_0001.txt
@@ -16,7 +16,7 @@ RENAME QuasiExt.txt QuasiExt_0001.txt
 RENAME TerExpRisk.txt TerExpRisk_0001.txt
 RENAME TerExtRisk.txt TerExtRisk_0001.txt
 RENAME TerPerDec.txt TerPerDec_0001.txt
-START /WAIT "R_SAM" "C:\Program Files\RAMASGIS\Metapop.exe" "SandLizard_1_modified_0002.mp" /RUN=YES /TEX
+START /WAIT "R_SAM" "H:\La Trobe Lecturing\Collaborations\GlobalEcologyGroup-Lab\RAMAS-Metapop\Metapop.exe" "SandLizard_1_modified_0002.mp" /RUN=YES /TEX
 RENAME Abund.txt Abund_0002.txt
 RENAME FinalStageN.txt FinalStageN_0002.txt
 RENAME Harvest.txt Harvest_0002.txt
@@ -32,7 +32,7 @@ RENAME QuasiExt.txt QuasiExt_0002.txt
 RENAME TerExpRisk.txt TerExpRisk_0002.txt
 RENAME TerExtRisk.txt TerExtRisk_0002.txt
 RENAME TerPerDec.txt TerPerDec_0002.txt
-START /WAIT "R_SAM" "C:\Program Files\RAMASGIS\Metapop.exe" "SandLizard_1_modified_0003.mp" /RUN=YES /TEX
+START /WAIT "R_SAM" "H:\La Trobe Lecturing\Collaborations\GlobalEcologyGroup-Lab\RAMAS-Metapop\Metapop.exe" "SandLizard_1_modified_0003.mp" /RUN=YES /TEX
 RENAME Abund.txt Abund_0003.txt
 RENAME FinalStageN.txt FinalStageN_0003.txt
 RENAME Harvest.txt Harvest_0003.txt
@@ -48,3 +48,4 @@ RENAME QuasiExt.txt QuasiExt_0003.txt
 RENAME TerExpRisk.txt TerExpRisk_0003.txt
 RENAME TerExtRisk.txt TerExtRisk_0003.txt
 RENAME TerPerDec.txt TerPerDec_0003.txt
+PAUSE

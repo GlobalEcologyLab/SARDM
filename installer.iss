@@ -5,16 +5,16 @@
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{4B68CCD3-FD7E-4854-A5EE-6AB3CFE1F3C8}
+AppId={{BF506680-3B99-460A-BE7C-F2305FF58E98}
 AppName=SARDM
-AppVersion=0.6
-AppVerName=SARDM 0.6
+AppVersion=0.7
+AppVerName=SARDM 0.7
 AppPublisher=Global Ecology Lab
 AppPublisherURL=http://www.example.com/
 AppSupportURL=http://www.example.com/
 AppUpdatesURL=http://www.example.com/
-DefaultDirName={pf}\SARDM v0.6
-DefaultGroupName=SARDM v0.6
+DefaultDirName={pf}\SARDM v0.7
+DefaultGroupName=SARDM v0.7
 OutputBaseFilename=setup
 Compression=lzma
 SolidCompression=yes
@@ -26,16 +26,16 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\afat32\hotmail-dropbox\Dropbox\GlobalEcology\PythonResources\vcredist_x86.exe"; DestDir: {tmp}
+Source: "C:\Users\shaythorne\Dropbox\GlobalEcology\PythonResources\vcredist_x86.exe"; DestDir: {tmp}
 Source: "dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "SARDM_config.txt"; DestDir: "{app}"
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files vcredist_x86.exe
 
 [Icons]
-Name: "{group}\SARDM v0.6"; Filename: "{app}\SARDM_v0_6.exe"
-Name: "{commondesktop}\SARDM v0.6"; Filename: "{app}\SARDM_v0_6.exe"; Tasks: desktopicon
+Name: "{group}\SARDM v0.7"; Filename: "{app}\SARDM_v0_7.exe"
+Name: "{commondesktop}\SARDM v0.7"; Filename: "{app}\SARDM_v0_7.exe"; Tasks: desktopicon
 
 [Run]
 Filename: "{tmp}\vcredist_x86.exe"; Parameters: "/qu"; StatusMsg: "Installing Microsoft Visual C++ 2008 Redistributable Package..."
 Filename: "{tmp}\vcredist_x86.exe"; Parameters: ""; StatusMsg: "Installing Microsoft Visual C++ 2008 Redistributable Package..."
-Filename: "{app}\SARDM_v0_6.exe"; Description: "{cm:LaunchProgram,SARDM}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\SARDM_v0_7.exe"; Description: "{cm:LaunchProgram,SARDM}"; Flags: nowait postinstall skipifsilent

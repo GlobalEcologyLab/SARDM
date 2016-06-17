@@ -206,7 +206,7 @@ class MetapopConfiguration :
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2 other extent']['Regional'] = { 'may_link_to_temporal_trend_files' : True, 'copy_files' : True, 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 20, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Fecundity Rates'] = {}
         self.parameter_mapping['alternatives']['Fecundity Rates']['option'] = 'sex_structure'
-        fecundity_rates_submatrix_mask = { 'partition' : 'diagonal_upper_right', 'rows' : 'first', 'include_diagonal' : False }
+        fecundity_rates_submatrix_mask = { 'partition' : 'diagonal_upper_right', 'rows' : 'first', 'include_diagonal' : True }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
@@ -216,7 +216,7 @@ class MetapopConfiguration :
         self.parameter_mapping['alternatives']['Fecundity Rates']['TwoSexes']['Polyandrous'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'quadrants' : { 'divide_at' : 'female_stages', 'upper_right' : fecundity_rates_submatrix_mask, 'lower_right' : fecundity_rates_submatrix_mask } } }
         self.parameter_mapping['alternatives']['Survival Rates'] = {}
         self.parameter_mapping['alternatives']['Survival Rates']['option'] = 'sex_structure'
-        survival_rates_submatrix_mask = { 'partition' : 'diagonal_lower_left', 'rows' : 'all', 'include_diagonal' : True }
+        survival_rates_submatrix_mask = { 'partition' : 'diagonal_lower_left', 'rows' : 'below_first', 'include_diagonal' : True }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
@@ -421,7 +421,7 @@ class MetapopConfiguration :
         self.parameter_result_input['Stage Multiplier 2'] = 'unique_or_percent'
         self.parameter_result_input['Dispersal Matrix'] = 'percent_change'
         self.parameter_result_input['Correlation Matrix'] = 'percent_change'
-        self.parameter_result_input['Fecundity Rates'] = 'last_non_zero'
+        self.parameter_result_input['Fecundity Rates'] = 'unique_or_percent' # was 'last_non_zero'
         self.parameter_result_input['Survival Rates'] = ['min_non_zero', 'max']
         self.parameter_result_input['Environmental Variation'] = 'percent_change'
 
@@ -2242,12 +2242,12 @@ class ApplicationGUI(tk.Frame) :
         for parameter_key, parameter_file_links in self.baseline_parameter_values['file_links'].items() :
             for row in range(np.shape(baseline_parameter_value_matrices[parameter_key])[0]) :
                 for col in range(np.shape(baseline_parameter_value_matrices[parameter_key])[1]) :
-                    link_file_name = parameter_file_links['link_frame'].iget_value(row, col)
+                    link_file_name = parameter_file_links['link_frame'].iat[row, col]
                     if parameter_file_links['file_contents'].has_key(link_file_name) :
                         if parameter_file_links['use_file_value'] == 'max' :
                             baseline_parameter_value_matrices[parameter_key][row, col] = np.max(parameter_file_links['file_contents'][link_file_name].get_values())
                         else : # first value
-                            baseline_parameter_value_matrices[parameter_key][row, col] = parameter_file_links['file_contents'][link_file_name].iget_value(0, 0)
+                            baseline_parameter_value_matrices[parameter_key][row, col] = parameter_file_links['file_contents'][link_file_name].iat[0, 0]
                     
         # Combine extracted and calculated matrices
         if use_calculated :
@@ -5195,7 +5195,7 @@ class ApplicationGUI(tk.Frame) :
 ## Main program
 
 application_name = 'SARDM'
-application_version = 'v0.6'
+application_version = 'v0.7'
 application_longname = 'SARDM: Sensitivity Analysis of Range Dynamics Models'
 
 # Set user application data directory

@@ -352,6 +352,8 @@ class MpFileExtractorAndGeneratorHelper :
             row_mask[0,:] = 1
         elif submatrix_mask_mapping['rows'] is 'all' :
             row_mask[:,:] = 1
+        elif submatrix_mask_mapping['rows'] is 'below_first' :
+            row_mask[1:,:] = 1
 
         # Combine masks and return (layered) mask
         mask *= row_mask
@@ -814,7 +816,7 @@ class MpFileExtractorAndGeneratorHelper :
                 for index in range(0, number_rows) :
 
                     # Extract the modified row values and convert them to a single row matrix
-                    modified_value_matrix = None
+                    modified_value_matrix = np.array([])
                     if mapping.has_key('under_diagonal_only') :
                         if index :
                             modified_value_matrix = np.reshape(single_layer_values[index,0:index], (1, index))
@@ -822,7 +824,7 @@ class MpFileExtractorAndGeneratorHelper :
                         modified_value_matrix = np.reshape(single_layer_values[index,:], (1, number_columns))
 
                     # Generate the delimited modified value string for template substitution
-                    if modified_value_matrix != None :
+                    if modified_value_matrix.size :
 
                         # Write modified matrix to string
                         string_buffer = StringIO()
@@ -831,7 +833,7 @@ class MpFileExtractorAndGeneratorHelper :
 
                         # Substitute indexed linked file names (implemented as single column only)
                         if self.parameter_file_links.has_key(parameter_key) :
-                            link_frame_entry = self.parameter_file_links[parameter_key]['link_frame'].iget_value(index, 0)
+                            link_frame_entry = self.parameter_file_links[parameter_key]['link_frame'].iat[index, 0]
                             if self.parameter_file_links[parameter_key]['file_contents'].has_key(link_frame_entry) :
                                 link_file_ext = string.split(link_frame_entry, '.').pop()
                                 link_frame_entry = string.replace(link_frame_entry, ('.' + link_file_ext), (self.config.file_generation_numbering_format % file_number + '.' + link_file_ext))
@@ -977,7 +979,7 @@ class MpFileExtractorAndGeneratorHelper :
             if self.parameter_file_links.has_key(parameter_key) and not sum_values :
                 values = []
                 for i, value in enumerate(modified_parameter_values[parameter_key]) :
-                    link_frame_entry = self.parameter_file_links[parameter_key]['link_frame'].iget_value(i, 0)
+                    link_frame_entry = self.parameter_file_links[parameter_key]['link_frame'].iat[i, 0]
                     if self.parameter_file_links[parameter_key]['file_contents'].has_key(link_frame_entry) :
                         file_contents = self.parameter_file_links[parameter_key]['file_contents'][link_frame_entry]
                         modified_file_values = file_contents.get_values()*multipliers[parameter_key]
@@ -1401,8 +1403,8 @@ class MpFileExtractorAndGeneratorHelper :
         for parameter_key in modified_parameters :
             if type(self.config.parameter_output_format[parameter_key]['short_heading']) is dict : # for (Low, Hi)
                 input_heading_line += (output_format % self.config.parameter_output_format[parameter_key]['short_heading']['single'])
-                input_heading_line += (output_format % self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0])
-                input_heading_line += (output_format % self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1])
+                #input_heading_line += (output_format % self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0])
+                #input_heading_line += (output_format % self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1])
             else : # string
                 input_heading_line += (output_format % self.config.parameter_output_format[parameter_key]['short_heading'])
         for result_key in selected_results :
@@ -1431,19 +1433,21 @@ class MpFileExtractorAndGeneratorHelper :
                         field_width = self.config.data_frame_percent_width
                     output_format = output_format.replace(self.config.data_frame_field_width_substitution, str(field_width))
                     input_data_line += (output_format % parameter_value)
-                    for i, result_config in enumerate(self.config.parameter_result_input[parameter_key]) :
-                        if result_config == 'percent_change' :
-                            output_format = self.config.parameter_output_format[parameter_key]['output_file_percent_format']
-                            field_width = self.config.data_frame_percent_width
-                        else :
-                            output_format = self.config.parameter_output_format[parameter_key]['output_file_format']
-                            field_width = self.config.data_frame_field_width
-                        output_format = output_format.replace(self.config.data_frame_field_width_substitution, str(field_width))
-                        input_data_line += (output_format % parameter_result_values[i])
+##                    for i, result_config in enumerate(self.config.parameter_result_input[parameter_key]) :
+##                        if result_config == 'percent_change' :
+##                            output_format = self.config.parameter_output_format[parameter_key]['output_file_percent_format']
+##                            field_width = self.config.data_frame_percent_width
+##                        else :
+##                            output_format = self.config.parameter_output_format[parameter_key]['output_file_format']
+##                            field_width = self.config.data_frame_field_width
+##                        output_format = output_format.replace(self.config.data_frame_field_width_substitution, str(field_width))
+##                        input_data_line += (output_format % parameter_result_values[i])
                 else :
+                    parameter_value = run_sample['data_frame_entry_details'][parameter_key]['value']
                     parameter_result_value = run_sample['data_frame_entry_details'][parameter_key]['result_value']
                     parameter_unique = run_sample['data_frame_entry_details'][parameter_key]['unique']
                     if self.config.parameter_result_input[parameter_key] == 'percent_change' or (self.config.parameter_result_input[parameter_key] == 'unique_or_percent' and not parameter_unique) :
+                        parameter_result_value = parameter_value # revert any old versions of generation_data.dat with other configs
                         output_format = self.config.parameter_output_format[parameter_key]['output_file_percent_format']
                         field_width = self.config.data_frame_percent_width
                     else :
@@ -1494,14 +1498,14 @@ class MpFileExtractorAndGeneratorHelper :
         for parameter_key in self.generation_data['parameters']['selected'] :
             if type(self.config.parameter_output_format[parameter_key]['short_heading']) is dict : # for (Low, Hi)
                 self.short_heading_key_map[self.config.parameter_output_format[parameter_key]['short_heading']['single']] = parameter_key
-                self.short_heading_key_map[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0]] = parameter_key + ' Min'
-                self.short_heading_key_map[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1]] = parameter_key + ' Max'
+                #self.short_heading_key_map[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0]] = parameter_key + ' Min'
+                #self.short_heading_key_map[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1]] = parameter_key + ' Max'
                 self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['single']] = []
-                self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0]] = []
-                self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1]] = []
+                #self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0]] = []
+                #self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1]] = []
                 self.results_input_keys.append(self.config.parameter_output_format[parameter_key]['short_heading']['single'])
-                self.results_input_keys.append(self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0])
-                self.results_input_keys.append(self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1])
+                #self.results_input_keys.append(self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][0])
+                #self.results_input_keys.append(self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][1])
                 self.glm_input_keys.append(self.config.parameter_output_format[parameter_key]['short_heading']['single'])
             else : # string
                 self.short_heading_key_map[self.config.parameter_output_format[parameter_key]['short_heading']] = parameter_key
@@ -1538,11 +1542,14 @@ class MpFileExtractorAndGeneratorHelper :
             for parameter_key in self.generation_data['parameters']['selected'] :
                 parameter_value = run_sample['data_frame_entry_details'][parameter_key]['value']
                 parameter_result_value = run_sample['data_frame_entry_details'][parameter_key]['result_value']
+                parameter_unique = run_sample['data_frame_entry_details'][parameter_key]['unique']
                 if type(parameter_result_value) is list and type(self.config.parameter_output_format[parameter_key]['short_heading']) is dict:
                     self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['single']].append(parameter_value)
-                    for i, value in enumerate(parameter_result_value) :
-                        self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][i]].append(parameter_result_value[i])
+                    #for i, value in enumerate(parameter_result_value) :
+                    #    self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']['multiple'][i]].append(parameter_result_value[i])
                 else : # single value
+                    if self.config.parameter_result_input[parameter_key] == 'percent_change' or (self.config.parameter_result_input[parameter_key] == 'unique_or_percent' and not parameter_unique) :
+                        parameter_result_value = parameter_value # revert any old versions of generation_data.dat with other configs
                     self.results_input_data[self.config.parameter_output_format[parameter_key]['short_heading']].append(parameter_result_value)
                     
             # Add result data
@@ -1633,7 +1640,7 @@ class MpFileExtractorAndGeneratorHelper :
         stderrs = glm_results.bse.copy().drop('const')
         std_coeffs = (coeffs/stderrs)/sum(abs(coeffs/stderrs))
         abs_std_coeffs = std_coeffs.abs()
-        abs_std_coeffs.sort(ascending=False)
+        abs_std_coeffs.sort(ascending=False) #.sort_values(inplace=True, ascending=False)
         return std_coeffs[abs_std_coeffs.keys()]
 
     # Method generates the result plot files

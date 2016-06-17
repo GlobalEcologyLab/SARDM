@@ -43,7 +43,7 @@ class PopulationMatrixGenerator :
     def calculateDispersalMatrix(self, a, b, c, Dmax) :
 
         # Calculate inter-population distances if needed
-        if self.inter_population_distances == None :
+        if self.inter_population_distances == None : # type(self.inter_population_distances) != np.ndarray :
             self.calculateInterPopulationDistances()
 
         # Construct the dispersal matrix
@@ -60,7 +60,7 @@ class PopulationMatrixGenerator :
     def calculateCorrelationMatrix(self, a, b, c) :
 
         # Calculate inter-population distances if needed
-        if self.inter_population_distances == None :
+        if self.inter_population_distances == None : # type(self.inter_population_distances) != np.ndarray :
             self.calculateInterPopulationDistances()
 
         # Construct the correlation matrix

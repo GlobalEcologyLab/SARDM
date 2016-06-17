@@ -1,0 +1,110 @@
+Metapopulation input file (5.1) map=ÿ
+Sabah Orang mp file
+
+
+
+
+5000
+91
+TRUE
+4 FALSE
+Fire
+
+Local
+Abundances
+not spread
+0.0000
+0.0000,0.0000,0.0000,0.0000
+
+
+Local
+Abundances
+not spread
+0.0000
+0.0000,0.0000,0.0000,0.0000
+False,Zero
+fecundities
+Lognormal,0
+0.000000
+count in total
+3 (F, S, K uncorrelated)
+Yes
+SelectedStages
+No
+BH
+
+1
+years
+OnlyFemale
+4
+Polygynous
+5.0
+0.0
+0.0000
+0
+P19,227.083,328.393,${Initial_Abundance_0},BH,1.062,${Carrying_Capacity_0},0.0,1.0,${temporal_trend_in_k_0},0.0043,${Local_Multiplier_1_0},${Probability_of_a_Catastrophe_1_0},TRUE,1,1,1,0.0,0,0,1,1.0,0,0,P19.dch,1,1,
+Migration
+FALSE
+0.000,0.00000,0.00000,0.00000
+ 0,
+Correlation
+FALSE
+0.000,0.00000,0.00000
+ 1,
+1 type(s) of stage matrix
+med
+1.000000
+1.000000
+0
+${Stage_Matrix_0_0} 
+${Stage_Matrix_0_1} 
+${Stage_Matrix_0_2} 
+${Stage_Matrix_0_3} 
+1 type(s) of st.dev. matrix
+default
+${Environmental_Variation_0_0} 
+${Environmental_Variation_0_1} 
+${Environmental_Variation_0_2} 
+${Environmental_Variation_0_3} 
+Constraints Matrix
+0.000000 0.000000 0.000000 0.000000 
+1.000000 1.000000 0.000000 0.000000 
+0.000000 1.000000 1.000000 0.000000 
+0.000000 0.000000 1.000000 1.000000 
+0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+${Stage_Multiplier_1_0} 
+0.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 
+11.256 48.240 45.024 96.480 
+female0
+1.00000000
+FALSE
+FALSE
+0.0
+female1-5
+1.00000000
+FALSE
+FALSE
+0.0
+female5-15
+1.00000000
+FALSE
+FALSE
+0.0
+female15+
+1.00000000
+FALSE
+TRUE
+1.0
+0 (pop mgmnt)
+0.0
+0.0
+2
+-End of file-

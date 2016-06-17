@@ -1,0 +1,463 @@
+Metapopulation input file (5.1) map=ÿ
+
+
+
+
+
+1000
+100
+TRUE
+6 FALSE
+Wet Year
+
+Local
+Abundances
+not spread
+0.0000
+0.0000,0.0000,0.0000,0.0000
+Harvest
+
+Local
+Abundances
+not spread
+0.0000
+0.0000,0.0000,0.0000,0.0000
+False,MaxNegative
+fecundities
+Lognormal,PoolVar
+0.000000
+count in total
+1 (F, S, K correlated)
+No
+SelectedStages
+No
+UD
+C:\Users\shaythorne\Dropbox\GlobalEcology\SARDM\Test\CaseStudies\Turtle\NLNTurtle.dll
+1
+years
+TwoSexes
+4
+Polygynous
+-1.0
+2.0
+0.0000
+4
+Pop 421,104.608,96.006,${Initial_Abundance_0},EX,1.34,${Carrying_Capacity_0},0.0,0.0,${temporal_trend_in_k_0},0.0,${Local_Multiplier_1_0},${Probability_of_a_Catastrophe_1_0},TRUE,2,1,1,0.0,1,${Probability_of_a_Catastrophe_2_0},2,0.0,0,0,1,1,1,0.93850,-3.880
+Pop 422,109.014,96.389,${Initial_Abundance_1},EX,1.34,${Carrying_Capacity_1},0,0,${temporal_trend_in_k_1},0,${Local_Multiplier_1_1},${Probability_of_a_Catastrophe_1_1},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_1},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 423,93.921,96.179,${Initial_Abundance_2},EX,1.34,${Carrying_Capacity_2},0,0,${temporal_trend_in_k_2},0,${Local_Multiplier_1_2},${Probability_of_a_Catastrophe_1_2},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_2},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 424,72.700,96.225,${Initial_Abundance_3},EX,1.34,${Carrying_Capacity_3},0,0,${temporal_trend_in_k_3},0,${Local_Multiplier_1_3},${Probability_of_a_Catastrophe_1_3},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_3},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 425,105.644,96.933,${Initial_Abundance_4},EX,1.34,${Carrying_Capacity_4},0,0,${temporal_trend_in_k_4},0,${Local_Multiplier_1_4},${Probability_of_a_Catastrophe_1_4},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_4},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 426,84.380,96.960,${Initial_Abundance_5},EX,1.34,${Carrying_Capacity_5},0,0,${temporal_trend_in_k_5},0,${Local_Multiplier_1_5},${Probability_of_a_Catastrophe_1_5},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_5},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 427,109.300,97.100,${Initial_Abundance_6},EX,1.34,${Carrying_Capacity_6},0,0,${temporal_trend_in_k_6},0,${Local_Multiplier_1_6},${Probability_of_a_Catastrophe_1_6},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_6},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 428,104.498,97.356,${Initial_Abundance_7},EX,1.34,${Carrying_Capacity_7},0,0,${temporal_trend_in_k_7},0,${Local_Multiplier_1_7},${Probability_of_a_Catastrophe_1_7},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_7},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 429,39.110,97.781,${Initial_Abundance_8},EX,1.34,${Carrying_Capacity_8},0,0,${temporal_trend_in_k_8},0,${Local_Multiplier_1_8},${Probability_of_a_Catastrophe_1_8},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_8},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 430,110.858,98.446,${Initial_Abundance_9},EX,1.34,${Carrying_Capacity_9},0,0,${temporal_trend_in_k_9},0,${Local_Multiplier_1_9},${Probability_of_a_Catastrophe_1_9},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_9},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 431,38.524,99.459,${Initial_Abundance_10},EX,1.34,${Carrying_Capacity_10},0,0,${temporal_trend_in_k_10},0,${Local_Multiplier_1_10},${Probability_of_a_Catastrophe_1_10},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_10},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 432,63.425,98.625,${Initial_Abundance_11},EX,1.34,${Carrying_Capacity_11},0,0,${temporal_trend_in_k_11},0,${Local_Multiplier_1_11},${Probability_of_a_Catastrophe_1_11},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_11},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 433,101.477,98.758,${Initial_Abundance_12},EX,1.34,${Carrying_Capacity_12},0,0,${temporal_trend_in_k_12},0,${Local_Multiplier_1_12},${Probability_of_a_Catastrophe_1_12},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_12},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 434,90.940,98.875,${Initial_Abundance_13},EX,1.34,${Carrying_Capacity_13},0,0,${temporal_trend_in_k_13},0,${Local_Multiplier_1_13},${Probability_of_a_Catastrophe_1_13},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_13},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 435,90.509,98.968,${Initial_Abundance_14},EX,1.34,${Carrying_Capacity_14},0,0,${temporal_trend_in_k_14},0,${Local_Multiplier_1_14},${Probability_of_a_Catastrophe_1_14},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_14},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 436,110.917,98.956,${Initial_Abundance_15},EX,1.34,${Carrying_Capacity_15},0,0,${temporal_trend_in_k_15},0,${Local_Multiplier_1_15},${Probability_of_a_Catastrophe_1_15},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_15},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 437,89.833,99.047,${Initial_Abundance_16},EX,1.34,${Carrying_Capacity_16},0,0,${temporal_trend_in_k_16},0,${Local_Multiplier_1_16},${Probability_of_a_Catastrophe_1_16},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_16},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 438,105.025,99.225,${Initial_Abundance_17},EX,1.34,${Carrying_Capacity_17},0,0,${temporal_trend_in_k_17},0,${Local_Multiplier_1_17},${Probability_of_a_Catastrophe_1_17},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_17},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 439,108.232,99.602,${Initial_Abundance_18},EX,1.34,${Carrying_Capacity_18},0,0,${temporal_trend_in_k_18},0,${Local_Multiplier_1_18},${Probability_of_a_Catastrophe_1_18},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_18},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 440,37.150,99.825,${Initial_Abundance_19},EX,1.34,${Carrying_Capacity_19},0,0,${temporal_trend_in_k_19},0,${Local_Multiplier_1_19},${Probability_of_a_Catastrophe_1_19},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_19},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 441,101.535,99.934,${Initial_Abundance_20},EX,1.34,${Carrying_Capacity_20},0,0,${temporal_trend_in_k_20},0,${Local_Multiplier_1_20},${Probability_of_a_Catastrophe_1_20},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_20},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 442,103.187,100.224,${Initial_Abundance_21},EX,1.34,${Carrying_Capacity_21},0,0,${temporal_trend_in_k_21},0,${Local_Multiplier_1_21},${Probability_of_a_Catastrophe_1_21},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_21},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 443,111.310,100.960,${Initial_Abundance_22},EX,1.34,${Carrying_Capacity_22},0,0,${temporal_trend_in_k_22},0,${Local_Multiplier_1_22},${Probability_of_a_Catastrophe_1_22},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_22},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 444,82.275,101.075,${Initial_Abundance_23},EX,1.34,${Carrying_Capacity_23},0,0,${temporal_trend_in_k_23},0,${Local_Multiplier_1_23},${Probability_of_a_Catastrophe_1_23},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_23},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 445,81.667,101.333,${Initial_Abundance_24},EX,1.34,${Carrying_Capacity_24},0,0,${temporal_trend_in_k_24},0,${Local_Multiplier_1_24},${Probability_of_a_Catastrophe_1_24},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_24},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 446,38.320,101.800,${Initial_Abundance_25},EX,1.34,${Carrying_Capacity_25},0,0,${temporal_trend_in_k_25},0,${Local_Multiplier_1_25},${Probability_of_a_Catastrophe_1_25},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_25},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 447,60.803,103.922,${Initial_Abundance_26},EX,1.34,${Carrying_Capacity_26},0,0,${temporal_trend_in_k_26},0,${Local_Multiplier_1_26},${Probability_of_a_Catastrophe_1_26},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_26},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 448,98.037,103.957,${Initial_Abundance_27},EX,1.34,${Carrying_Capacity_27},0,0,${temporal_trend_in_k_27},0,${Local_Multiplier_1_27},${Probability_of_a_Catastrophe_1_27},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_27},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 449,49.406,104.194,${Initial_Abundance_28},EX,1.34,${Carrying_Capacity_28},0,0,${temporal_trend_in_k_28},0,${Local_Multiplier_1_28},${Probability_of_a_Catastrophe_1_28},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_28},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 450,34.032,105.621,${Initial_Abundance_29},EX,1.34,${Carrying_Capacity_29},0,0,${temporal_trend_in_k_29},0,${Local_Multiplier_1_29},${Probability_of_a_Catastrophe_1_29},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_29},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 451,34.464,106.750,${Initial_Abundance_30},EX,1.34,${Carrying_Capacity_30},0,0,${temporal_trend_in_k_30},0,${Local_Multiplier_1_30},${Probability_of_a_Catastrophe_1_30},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_30},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 452,96.775,107.350,${Initial_Abundance_31},EX,1.34,${Carrying_Capacity_31},0,0,${temporal_trend_in_k_31},0,${Local_Multiplier_1_31},${Probability_of_a_Catastrophe_1_31},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_31},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 453,51.025,107.625,${Initial_Abundance_32},EX,1.34,${Carrying_Capacity_32},0,0,${temporal_trend_in_k_32},0,${Local_Multiplier_1_32},${Probability_of_a_Catastrophe_1_32},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_32},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 454,102.045,107.841,${Initial_Abundance_33},EX,1.34,${Carrying_Capacity_33},0,0,${temporal_trend_in_k_33},0,${Local_Multiplier_1_33},${Probability_of_a_Catastrophe_1_33},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_33},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 455,34.958,108.990,${Initial_Abundance_34},EX,1.34,${Carrying_Capacity_34},0,0,${temporal_trend_in_k_34},0,${Local_Multiplier_1_34},${Probability_of_a_Catastrophe_1_34},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_34},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 456,86.026,108.582,${Initial_Abundance_35},EX,1.34,${Carrying_Capacity_35},0,0,${temporal_trend_in_k_35},0,${Local_Multiplier_1_35},${Probability_of_a_Catastrophe_1_35},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_35},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 457,86.375,109.806,${Initial_Abundance_36},EX,1.34,${Carrying_Capacity_36},0,0,${temporal_trend_in_k_36},0,${Local_Multiplier_1_36},${Probability_of_a_Catastrophe_1_36},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_36},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 458,85.179,110.192,${Initial_Abundance_37},EX,1.34,${Carrying_Capacity_37},0,0,${temporal_trend_in_k_37},0,${Local_Multiplier_1_37},${Probability_of_a_Catastrophe_1_37},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_37},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 459,82.268,110.884,${Initial_Abundance_38},EX,1.34,${Carrying_Capacity_38},0,0,${temporal_trend_in_k_38},0,${Local_Multiplier_1_38},${Probability_of_a_Catastrophe_1_38},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_38},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 460,82.750,112.225,${Initial_Abundance_39},EX,1.34,${Carrying_Capacity_39},0,0,${temporal_trend_in_k_39},0,${Local_Multiplier_1_39},${Probability_of_a_Catastrophe_1_39},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_39},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 461,76.061,112.841,${Initial_Abundance_40},EX,1.34,${Carrying_Capacity_40},0,0,${temporal_trend_in_k_40},0,${Local_Multiplier_1_40},${Probability_of_a_Catastrophe_1_40},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_40},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 462,74.843,112.817,${Initial_Abundance_41},EX,1.34,${Carrying_Capacity_41},0,0,${temporal_trend_in_k_41},0,${Local_Multiplier_1_41},${Probability_of_a_Catastrophe_1_41},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_41},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 463,78.772,113.300,${Initial_Abundance_42},EX,1.34,${Carrying_Capacity_42},0,0,${temporal_trend_in_k_42},0,${Local_Multiplier_1_42},${Probability_of_a_Catastrophe_1_42},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_42},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 464,118.343,115.350,${Initial_Abundance_43},EX,1.34,${Carrying_Capacity_43},0,0,${temporal_trend_in_k_43},0,${Local_Multiplier_1_43},${Probability_of_a_Catastrophe_1_43},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_43},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 465,129.732,122.379,${Initial_Abundance_44},EX,1.34,${Carrying_Capacity_44},0,0,${temporal_trend_in_k_44},0,${Local_Multiplier_1_44},${Probability_of_a_Catastrophe_1_44},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_44},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 466,132.520,122.400,${Initial_Abundance_45},EX,1.34,${Carrying_Capacity_45},0,0,${temporal_trend_in_k_45},0,${Local_Multiplier_1_45},${Probability_of_a_Catastrophe_1_45},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_45},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 467,128.388,124.160,${Initial_Abundance_46},EX,1.34,${Carrying_Capacity_46},0,0,${temporal_trend_in_k_46},0,${Local_Multiplier_1_46},${Probability_of_a_Catastrophe_1_46},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_46},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 468,94.200,126.064,${Initial_Abundance_47},EX,1.34,${Carrying_Capacity_47},0,0,${temporal_trend_in_k_47},0,${Local_Multiplier_1_47},${Probability_of_a_Catastrophe_1_47},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_47},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 469,91.700,128.150,${Initial_Abundance_48},EX,1.34,${Carrying_Capacity_48},0,0,${temporal_trend_in_k_48},0,${Local_Multiplier_1_48},${Probability_of_a_Catastrophe_1_48},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_48},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 470,128.619,128.262,${Initial_Abundance_49},EX,1.34,${Carrying_Capacity_49},0,0,${temporal_trend_in_k_49},0,${Local_Multiplier_1_49},${Probability_of_a_Catastrophe_1_49},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_49},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 471,118.300,130.971,${Initial_Abundance_50},EX,1.34,${Carrying_Capacity_50},0,0,${temporal_trend_in_k_50},0,${Local_Multiplier_1_50},${Probability_of_a_Catastrophe_1_50},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_50},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 472,108.983,131.974,${Initial_Abundance_51},EX,1.34,${Carrying_Capacity_51},0,0,${temporal_trend_in_k_51},0,${Local_Multiplier_1_51},${Probability_of_a_Catastrophe_1_51},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_51},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 473,116.853,131.961,${Initial_Abundance_52},EX,1.34,${Carrying_Capacity_52},0,0,${temporal_trend_in_k_52},0,${Local_Multiplier_1_52},${Probability_of_a_Catastrophe_1_52},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_52},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 474,126.247,132.544,${Initial_Abundance_53},EX,1.34,${Carrying_Capacity_53},0,0,${temporal_trend_in_k_53},0,${Local_Multiplier_1_53},${Probability_of_a_Catastrophe_1_53},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_53},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 475,99.776,132.667,${Initial_Abundance_54},EX,1.34,${Carrying_Capacity_54},0,0,${temporal_trend_in_k_54},0,${Local_Multiplier_1_54},${Probability_of_a_Catastrophe_1_54},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_54},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 476,108.692,133.909,${Initial_Abundance_55},EX,1.34,${Carrying_Capacity_55},0,0,${temporal_trend_in_k_55},0,${Local_Multiplier_1_55},${Probability_of_a_Catastrophe_1_55},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_55},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 477,126.087,133.923,${Initial_Abundance_56},EX,1.34,${Carrying_Capacity_56},0,0,${temporal_trend_in_k_56},0,${Local_Multiplier_1_56},${Probability_of_a_Catastrophe_1_56},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_56},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 478,120.385,134.200,${Initial_Abundance_57},EX,1.34,${Carrying_Capacity_57},0,0,${temporal_trend_in_k_57},0,${Local_Multiplier_1_57},${Probability_of_a_Catastrophe_1_57},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_57},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 479,98.751,134.724,${Initial_Abundance_58},EX,1.34,${Carrying_Capacity_58},0,0,${temporal_trend_in_k_58},0,${Local_Multiplier_1_58},${Probability_of_a_Catastrophe_1_58},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_58},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 480,121.793,135.405,${Initial_Abundance_59},EX,1.34,${Carrying_Capacity_59},0,0,${temporal_trend_in_k_59},0,${Local_Multiplier_1_59},${Probability_of_a_Catastrophe_1_59},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_59},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 481,118.552,135.206,${Initial_Abundance_60},EX,1.34,${Carrying_Capacity_60},0,0,${temporal_trend_in_k_60},0,${Local_Multiplier_1_60},${Probability_of_a_Catastrophe_1_60},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_60},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 482,136.292,136.812,${Initial_Abundance_61},EX,1.34,${Carrying_Capacity_61},0,0,${temporal_trend_in_k_61},0,${Local_Multiplier_1_61},${Probability_of_a_Catastrophe_1_61},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_61},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 483,116.710,137.594,${Initial_Abundance_62},EX,1.34,${Carrying_Capacity_62},0,0,${temporal_trend_in_k_62},0,${Local_Multiplier_1_62},${Probability_of_a_Catastrophe_1_62},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_62},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 484,91.698,139.000,${Initial_Abundance_63},EX,1.34,${Carrying_Capacity_63},0,0,${temporal_trend_in_k_63},0,${Local_Multiplier_1_63},${Probability_of_a_Catastrophe_1_63},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_63},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 485,95.228,139.097,${Initial_Abundance_64},EX,1.34,${Carrying_Capacity_64},0,0,${temporal_trend_in_k_64},0,${Local_Multiplier_1_64},${Probability_of_a_Catastrophe_1_64},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_64},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 486,103.271,139.526,${Initial_Abundance_65},EX,1.34,${Carrying_Capacity_65},0,0,${temporal_trend_in_k_65},0,${Local_Multiplier_1_65},${Probability_of_a_Catastrophe_1_65},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_65},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 487,91.543,139.796,${Initial_Abundance_66},EX,1.34,${Carrying_Capacity_66},0,0,${temporal_trend_in_k_66},0,${Local_Multiplier_1_66},${Probability_of_a_Catastrophe_1_66},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_66},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 488,97.942,142.567,${Initial_Abundance_67},EX,1.34,${Carrying_Capacity_67},0,0,${temporal_trend_in_k_67},0,${Local_Multiplier_1_67},${Probability_of_a_Catastrophe_1_67},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_67},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 489,96.488,144.003,${Initial_Abundance_68},EX,1.34,${Carrying_Capacity_68},0,0,${temporal_trend_in_k_68},0,${Local_Multiplier_1_68},${Probability_of_a_Catastrophe_1_68},TRUE,1,1,1,0,1,${Probability_of_a_Catastrophe_2_68},1,0,0,0,1,1,1,0.93850,-3.880
+Pop 490,94.122,144.666,${Initial_Abundance_69},EX,1.34,${Carrying_Capacity_69},0,0,${temporal_trend_in_k_69},0,${Local_Multiplier_1_69},${Probability_of_a_Catastrophe_1_69},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_69},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 491,93.407,144.879,${Initial_Abundance_70},EX,1.34,${Carrying_Capacity_70},0,0,${temporal_trend_in_k_70},0,${Local_Multiplier_1_70},${Probability_of_a_Catastrophe_1_70},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_70},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 492,90.909,145.067,${Initial_Abundance_71},EX,1.34,${Carrying_Capacity_71},0,0,${temporal_trend_in_k_71},0,${Local_Multiplier_1_71},${Probability_of_a_Catastrophe_1_71},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_71},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 493,88.904,145.308,${Initial_Abundance_72},EX,1.34,${Carrying_Capacity_72},0,0,${temporal_trend_in_k_72},0,${Local_Multiplier_1_72},${Probability_of_a_Catastrophe_1_72},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_72},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 494,92.712,145.543,${Initial_Abundance_73},EX,1.34,${Carrying_Capacity_73},0,0,${temporal_trend_in_k_73},0,${Local_Multiplier_1_73},${Probability_of_a_Catastrophe_1_73},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_73},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 495,93.925,145.700,${Initial_Abundance_74},EX,1.34,${Carrying_Capacity_74},0,0,${temporal_trend_in_k_74},0,${Local_Multiplier_1_74},${Probability_of_a_Catastrophe_1_74},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_74},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 496,88.651,146.265,${Initial_Abundance_75},EX,1.34,${Carrying_Capacity_75},0,0,${temporal_trend_in_k_75},0,${Local_Multiplier_1_75},${Probability_of_a_Catastrophe_1_75},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_75},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 497,93.713,146.450,${Initial_Abundance_76},EX,1.34,${Carrying_Capacity_76},0,0,${temporal_trend_in_k_76},0,${Local_Multiplier_1_76},${Probability_of_a_Catastrophe_1_76},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_76},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 498,90.805,146.568,${Initial_Abundance_77},EX,1.34,${Carrying_Capacity_77},0,0,${temporal_trend_in_k_77},0,${Local_Multiplier_1_77},${Probability_of_a_Catastrophe_1_77},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_77},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 499,94.541,147.165,${Initial_Abundance_78},EX,1.34,${Carrying_Capacity_78},0,0,${temporal_trend_in_k_78},0,${Local_Multiplier_1_78},${Probability_of_a_Catastrophe_1_78},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_78},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 500,87.081,147.185,${Initial_Abundance_79},EX,1.34,${Carrying_Capacity_79},0,0,${temporal_trend_in_k_79},0,${Local_Multiplier_1_79},${Probability_of_a_Catastrophe_1_79},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_79},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 501,91.843,147.154,${Initial_Abundance_80},EX,1.34,${Carrying_Capacity_80},0,0,${temporal_trend_in_k_80},0,${Local_Multiplier_1_80},${Probability_of_a_Catastrophe_1_80},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_80},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 502,86.197,147.532,${Initial_Abundance_81},EX,1.34,${Carrying_Capacity_81},0,0,${temporal_trend_in_k_81},0,${Local_Multiplier_1_81},${Probability_of_a_Catastrophe_1_81},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_81},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 503,95.956,148.031,${Initial_Abundance_82},EX,1.34,${Carrying_Capacity_82},0,0,${temporal_trend_in_k_82},0,${Local_Multiplier_1_82},${Probability_of_a_Catastrophe_1_82},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_82},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 504,91.207,148.364,${Initial_Abundance_83},EX,1.34,${Carrying_Capacity_83},0,0,${temporal_trend_in_k_83},0,${Local_Multiplier_1_83},${Probability_of_a_Catastrophe_1_83},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_83},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 505,90.033,149.063,${Initial_Abundance_84},EX,1.34,${Carrying_Capacity_84},0,0,${temporal_trend_in_k_84},0,${Local_Multiplier_1_84},${Probability_of_a_Catastrophe_1_84},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_84},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 506,96.160,149.130,${Initial_Abundance_85},EX,1.34,${Carrying_Capacity_85},0,0,${temporal_trend_in_k_85},0,${Local_Multiplier_1_85},${Probability_of_a_Catastrophe_1_85},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_85},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 507,96.015,150.561,${Initial_Abundance_86},EX,1.34,${Carrying_Capacity_86},0,0,${temporal_trend_in_k_86},0,${Local_Multiplier_1_86},${Probability_of_a_Catastrophe_1_86},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_86},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 508,81.440,151.467,${Initial_Abundance_87},EX,1.34,${Carrying_Capacity_87},0,0,${temporal_trend_in_k_87},0,${Local_Multiplier_1_87},${Probability_of_a_Catastrophe_1_87},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_87},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 509,108.255,151.841,${Initial_Abundance_88},EX,1.34,${Carrying_Capacity_88},0,0,${temporal_trend_in_k_88},0,${Local_Multiplier_1_88},${Probability_of_a_Catastrophe_1_88},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_88},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 510,88.034,152.336,${Initial_Abundance_89},EX,1.34,${Carrying_Capacity_89},0,0,${temporal_trend_in_k_89},0,${Local_Multiplier_1_89},${Probability_of_a_Catastrophe_1_89},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_89},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 511,58.223,154.050,${Initial_Abundance_90},EX,1.34,${Carrying_Capacity_90},0,0,${temporal_trend_in_k_90},0,${Local_Multiplier_1_90},${Probability_of_a_Catastrophe_1_90},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_90},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 512,85.200,153.935,${Initial_Abundance_91},EX,1.34,${Carrying_Capacity_91},0,0,${temporal_trend_in_k_91},0,${Local_Multiplier_1_91},${Probability_of_a_Catastrophe_1_91},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_91},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 513,105.126,154.410,${Initial_Abundance_92},EX,1.34,${Carrying_Capacity_92},0,0,${temporal_trend_in_k_92},0,${Local_Multiplier_1_92},${Probability_of_a_Catastrophe_1_92},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_92},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 514,104.787,154.863,${Initial_Abundance_93},EX,1.34,${Carrying_Capacity_93},0,0,${temporal_trend_in_k_93},0,${Local_Multiplier_1_93},${Probability_of_a_Catastrophe_1_93},TRUE,2,1,1,0,1.125,${Probability_of_a_Catastrophe_2_93},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 515,95.582,155.224,${Initial_Abundance_94},EX,1.34,${Carrying_Capacity_94},0,0,${temporal_trend_in_k_94},0,${Local_Multiplier_1_94},${Probability_of_a_Catastrophe_1_94},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_94},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 516,93.712,155.429,${Initial_Abundance_95},EX,1.34,${Carrying_Capacity_95},0,0,${temporal_trend_in_k_95},0,${Local_Multiplier_1_95},${Probability_of_a_Catastrophe_1_95},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_95},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 517,100.877,155.653,${Initial_Abundance_96},EX,1.34,${Carrying_Capacity_96},0,0,${temporal_trend_in_k_96},0,${Local_Multiplier_1_96},${Probability_of_a_Catastrophe_1_96},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_96},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 518,94.884,161.042,${Initial_Abundance_97},EX,1.34,${Carrying_Capacity_97},0,0,${temporal_trend_in_k_97},0,${Local_Multiplier_1_97},${Probability_of_a_Catastrophe_1_97},TRUE,2,1,1,0,1,${Probability_of_a_Catastrophe_2_97},2,0,0,0,1,1,1,0.93850,-3.880
+Pop 519,108.958,161.735,${Initial_Abundance_98},EX,1.34,${Carrying_Capacity_98},0,0,${temporal_trend_in_k_98},0,${Local_Multiplier_1_98},${Probability_of_a_Catastrophe_1_98},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_98},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 520,96.050,161.875,${Initial_Abundance_99},EX,1.34,${Carrying_Capacity_99},0,0,${temporal_trend_in_k_99},0,${Local_Multiplier_1_99},${Probability_of_a_Catastrophe_1_99},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_99},3,0,0,0,1,1,1,0.93850,-3.880
+Pop 521,108.185,162.023,${Initial_Abundance_100},EX,1.34,${Carrying_Capacity_100},0,0,${temporal_trend_in_k_100},0,${Local_Multiplier_1_100},${Probability_of_a_Catastrophe_1_100},TRUE,3,1,1,0,1,${Probability_of_a_Catastrophe_2_100},3,0,0,0,1,1,1,0.93850,-3.880
+Migration
+FALSE
+0.200,1.80000,2.40000,4.00000
+${Dispersal_Matrix_0},
+${Dispersal_Matrix_1},
+${Dispersal_Matrix_2},
+${Dispersal_Matrix_3},
+${Dispersal_Matrix_4},
+${Dispersal_Matrix_5},
+${Dispersal_Matrix_6},
+${Dispersal_Matrix_7},
+${Dispersal_Matrix_8},
+${Dispersal_Matrix_9},
+${Dispersal_Matrix_10},
+${Dispersal_Matrix_11},
+${Dispersal_Matrix_12},
+${Dispersal_Matrix_13},
+${Dispersal_Matrix_14},
+${Dispersal_Matrix_15},
+${Dispersal_Matrix_16},
+${Dispersal_Matrix_17},
+${Dispersal_Matrix_18},
+${Dispersal_Matrix_19},
+${Dispersal_Matrix_20},
+${Dispersal_Matrix_21},
+${Dispersal_Matrix_22},
+${Dispersal_Matrix_23},
+${Dispersal_Matrix_24},
+${Dispersal_Matrix_25},
+${Dispersal_Matrix_26},
+${Dispersal_Matrix_27},
+${Dispersal_Matrix_28},
+${Dispersal_Matrix_29},
+${Dispersal_Matrix_30},
+${Dispersal_Matrix_31},
+${Dispersal_Matrix_32},
+${Dispersal_Matrix_33},
+${Dispersal_Matrix_34},
+${Dispersal_Matrix_35},
+${Dispersal_Matrix_36},
+${Dispersal_Matrix_37},
+${Dispersal_Matrix_38},
+${Dispersal_Matrix_39},
+${Dispersal_Matrix_40},
+${Dispersal_Matrix_41},
+${Dispersal_Matrix_42},
+${Dispersal_Matrix_43},
+${Dispersal_Matrix_44},
+${Dispersal_Matrix_45},
+${Dispersal_Matrix_46},
+${Dispersal_Matrix_47},
+${Dispersal_Matrix_48},
+${Dispersal_Matrix_49},
+${Dispersal_Matrix_50},
+${Dispersal_Matrix_51},
+${Dispersal_Matrix_52},
+${Dispersal_Matrix_53},
+${Dispersal_Matrix_54},
+${Dispersal_Matrix_55},
+${Dispersal_Matrix_56},
+${Dispersal_Matrix_57},
+${Dispersal_Matrix_58},
+${Dispersal_Matrix_59},
+${Dispersal_Matrix_60},
+${Dispersal_Matrix_61},
+${Dispersal_Matrix_62},
+${Dispersal_Matrix_63},
+${Dispersal_Matrix_64},
+${Dispersal_Matrix_65},
+${Dispersal_Matrix_66},
+${Dispersal_Matrix_67},
+${Dispersal_Matrix_68},
+${Dispersal_Matrix_69},
+${Dispersal_Matrix_70},
+${Dispersal_Matrix_71},
+${Dispersal_Matrix_72},
+${Dispersal_Matrix_73},
+${Dispersal_Matrix_74},
+${Dispersal_Matrix_75},
+${Dispersal_Matrix_76},
+${Dispersal_Matrix_77},
+${Dispersal_Matrix_78},
+${Dispersal_Matrix_79},
+${Dispersal_Matrix_80},
+${Dispersal_Matrix_81},
+${Dispersal_Matrix_82},
+${Dispersal_Matrix_83},
+${Dispersal_Matrix_84},
+${Dispersal_Matrix_85},
+${Dispersal_Matrix_86},
+${Dispersal_Matrix_87},
+${Dispersal_Matrix_88},
+${Dispersal_Matrix_89},
+${Dispersal_Matrix_90},
+${Dispersal_Matrix_91},
+${Dispersal_Matrix_92},
+${Dispersal_Matrix_93},
+${Dispersal_Matrix_94},
+${Dispersal_Matrix_95},
+${Dispersal_Matrix_96},
+${Dispersal_Matrix_97},
+${Dispersal_Matrix_98},
+${Dispersal_Matrix_99},
+${Dispersal_Matrix_100},
+Correlation
+TRUE
+0.000,0.10000,0.00000
+3 type(s) of stage matrix
+Wet Year
+1.000000
+1.000000
+0
+${Stage_Matrix_0_0} 
+${Stage_Matrix_0_1} 
+${Stage_Matrix_0_2} 
+${Stage_Matrix_0_3} 
+${Stage_Matrix_0_4} 
+${Stage_Matrix_0_5} 
+DryYearPig
+1.000000
+1.000000
+0
+${Stage_Matrix_1_0} 
+${Stage_Matrix_1_1} 
+${Stage_Matrix_1_2} 
+${Stage_Matrix_1_3} 
+${Stage_Matrix_1_4} 
+${Stage_Matrix_1_5} 
+DryNoPigs
+1.000000
+1.000000
+0
+${Stage_Matrix_2_0} 
+${Stage_Matrix_2_1} 
+${Stage_Matrix_2_2} 
+${Stage_Matrix_2_3} 
+${Stage_Matrix_2_4} 
+${Stage_Matrix_2_5} 
+3 type(s) of st.dev. matrix
+WetYear
+${Environmental_Variation_0_0} 
+${Environmental_Variation_0_1} 
+${Environmental_Variation_0_2} 
+${Environmental_Variation_0_3} 
+${Environmental_Variation_0_4} 
+${Environmental_Variation_0_5} 
+DryYearPig
+${Environmental_Variation_1_0} 
+${Environmental_Variation_1_1} 
+${Environmental_Variation_1_2} 
+${Environmental_Variation_1_3} 
+${Environmental_Variation_1_4} 
+${Environmental_Variation_1_5} 
+DryYearNoP
+${Environmental_Variation_2_0} 
+${Environmental_Variation_2_1} 
+${Environmental_Variation_2_2} 
+${Environmental_Variation_2_3} 
+${Environmental_Variation_2_4} 
+${Environmental_Variation_2_5} 
+Constraints Matrix
+1.000000 0.000000 0.000000 0.000000 1.000000 1.000000 
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 1.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 1.000000 
+0.200000 1.000000 1.000000 1.000000 0.200000 1.000000 
+0.707000 1.000000 0.241000 0.241000 1.000000 1.000000 
+0.450000 0.695000 1.000000 1.000000 1.000000 1.000000 
+1.000000 0.396000 0.644000 1.000000 1.000000 1.000000 
+1.000000 1.000000 0.151000 0.539000 1.000000 1.000000 
+1.000000 1.000000 0.241000 0.241000 0.707000 1.000000 
+1.000000 1.000000 1.000000 1.000000 0.450000 0.539000 
+${Stage_Multiplier_1_0} 
+0.947000 1.000000 0.241000 0.241000 1.000000 1.000000 
+0.870000 0.944000 1.000000 1.000000 1.000000 1.000000 
+1.000000 0.854000 0.938000 1.000000 1.000000 1.000000 
+1.000000 1.000000 0.744000 0.897000 1.000000 1.000000 
+1.000000 1.000000 0.241000 0.241000 0.947000 1.000000 
+1.000000 1.000000 1.000000 1.000000 0.870000 0.897000 
+${Stage_Multiplier_2_0} 
+7.370 4.520 3.734 0.590 0.393 0.393 
+27.547 12.775 7.885 0.998 1.597 1.198 
+0.818 0.818 1.091 0.182 0.000 0.091 
+0.600 0.800 1.300 0.200 0.000 0.100 
+2.172 2.897 3.103 0.517 0.103 0.207 
+0.154 0.231 0.538 0.077 0.000 0.000 
+4.404 5.735 5.325 0.717 0.205 0.614 
+4.952 3.508 3.405 0.516 0.310 0.310 
+6.439 4.195 7.220 4.390 0.390 1.366 
+1.321 1.415 1.698 0.283 0.094 0.189 
+8.500 8.700 21.800 16.400 6.300 9.300 
+0.000 0.167 0.666 0.167 0.000 0.000 
+1.938 1.938 2.477 0.323 0.108 0.215 
+0.914 1.930 5.992 3.758 0.000 0.406 
+5.354 2.929 6.768 4.141 0.303 0.505 
+1.653 2.333 2.431 0.292 0.097 0.194 
+1.167 2.042 6.319 3.986 0.097 0.389 
+1.607 1.714 2.036 0.321 0.107 0.214 
+17.100 10.600 7.300 1.000 1.000 1.000 
+6.500 4.333 7.485 5.121 0.492 2.068 
+5.324 3.944 3.648 0.493 0.296 0.296 
+12.780 8.061 5.997 0.786 0.688 0.688 
+158.415 79.708 35.649 3.605 9.513 7.110 
+0.000 0.000 0.000 0.000 0.000 0.000 
+0.000 0.000 0.000 0.000 0.000 0.000 
+0.643 0.429 2.143 1.821 0.429 0.536 
+1.619 1.619 5.464 5.565 1.214 1.518 
+8.040 5.729 4.724 0.603 0.402 0.503 
+0.000 0.115 1.731 1.154 0.000 0.000 
+0.389 0.486 2.625 2.722 0.292 0.486 
+2.900 1.800 5.700 5.400 2.300 1.900 
+0.000 0.000 0.571 0.429 0.000 0.000 
+0.000 0.115 1.731 1.154 0.000 0.000 
+0.000 0.190 2.191 1.619 0.000 0.000 
+4.212 3.811 10.129 8.324 3.109 5.415 
+20.028 13.919 23.232 11.917 1.102 1.803 
+2.287 3.877 7.357 2.883 0.099 0.497 
+14.171 7.432 7.532 2.180 0.892 0.793 
+2.773 2.240 2.347 0.320 0.107 0.213 
+0.222 0.556 1.000 0.222 0.000 0.000 
+31.796 17.754 11.435 1.505 1.906 1.605 
+59.005 29.603 17.862 2.208 3.512 2.810 
+12.543 8.128 6.021 0.803 0.702 0.803 
+22.600 12.900 8.900 1.200 1.300 1.100 
+11.210 9.722 17.460 9.425 0.595 1.587 
+0.000 0.000 0.000 0.000 0.000 0.000 
+5.783 5.275 10.043 5.580 0.304 1.014 
+0.200 0.200 0.500 0.100 0.000 0.000 
+0.000 0.000 0.000 0.000 0.000 0.000 
+0.000 0.111 1.778 1.111 0.000 0.000 
+9.159 6.615 5.394 0.712 0.509 0.611 
+31.210 26.523 47.961 25.725 1.695 4.886 
+22.748 12.426 8.318 1.102 1.303 1.102 
+529.546 245.475 136.186 17.198 31.797 22.798 
+84.993 40.102 25.438 4.389 5.088 3.990 
+31.270 25.958 45.702 24.555 1.704 4.811 
+21.037 39.670 41.172 6.111 1.202 4.808 
+39.623 33.135 49.703 23.854 2.296 5.390 
+46.954 40.061 70.331 37.264 2.697 7.692 
+154.052 71.024 46.816 9.403 9.403 7.302 
+12.334 10.842 19.794 10.643 0.696 1.691 
+0.000 0.091 1.455 1.455 0.000 0.000 
+12.140 7.734 5.874 0.783 0.685 0.783 
+4.380 2.954 2.750 0.407 0.204 0.306 
+12.322 10.419 19.235 10.719 0.601 1.703 
+1.884 1.884 4.562 3.273 0.099 0.298 
+2.090 1.985 2.299 0.313 0.104 0.209 
+28.600 15.600 10.300 1.500 1.600 1.400 
+0.421 0.842 3.474 2.842 0.211 0.211 
+21.548 8.180 7.282 1.895 1.297 0.798 
+2.151 5.428 6.554 2.151 0.102 0.614 
+40.208 18.798 11.862 2.010 2.413 1.709 
+1.785 7.139 15.864 8.725 0.099 1.388 
+16.195 7.243 7.142 1.811 0.905 0.704 
+2.732 5.060 6.173 2.125 0.202 0.708 
+33.200 20.400 24.600 12.200 2.000 2.600 
+3.403 3.403 5.056 1.458 0.194 0.486 
+3.126 3.630 3.933 0.706 0.202 0.403 
+3.939 2.758 4.432 1.379 0.197 0.295 
+8.084 5.833 5.730 1.330 0.409 0.614 
+2.046 1.938 2.262 0.431 0.108 0.215 
+9.770 6.310 4.987 0.814 0.611 0.509 
+12.903 9.375 16.835 9.073 0.605 1.210 
+0.600 0.720 1.320 0.240 0.000 0.120 
+0.750 0.844 1.125 0.188 0.000 0.094 
+0.857 2.095 4.762 1.905 0.095 0.286 
+3.870 2.954 3.157 0.509 0.204 0.306 
+47.950 25.279 15.549 2.006 2.809 2.408 
+5.552 6.056 18.270 11.507 0.303 1.312 
+11.345 9.538 17.370 9.538 0.602 1.606 
+4.773 3.758 3.453 0.508 0.203 0.305 
+8.200 7.300 14.300 7.700 0.400 1.100 
+35.237 20.922 23.125 10.111 2.002 2.603 
+4.139 8.681 13.022 4.744 0.202 1.211 
+1.853 1.853 2.471 0.515 0.103 0.206 
+1.869 1.869 4.721 3.148 0.098 0.295 
+23.970 20.058 35.403 19.056 1.304 3.209 
+11.967 7.022 5.736 0.989 0.692 0.593 
+5.292 8.786 30.054 18.671 0.300 1.897 
+0.709 1.316 3.747 2.025 0.000 0.203 
+13.150 11.644 31.921 19.374 0.703 2.208 
+F S1 <140m
+1.00000000
+FALSE
+FALSE
+0.0
+F S2 140-1
+1.00000000
+FALSE
+TRUE
+0.0
+F S3 180-2
+1.00000000
+FALSE
+TRUE
+1.0
+F S4  >220
+1.00000000
+FALSE
+TRUE
+1.0
+M S5 <140m
+1.00000000
+FALSE
+FALSE
+0.0
+M S6 >140m
+1.00000000
+FALSE
+TRUE
+1.0
+0 (pop mgmnt)
+ 0.00000000000000E+0000
+ 0.00000000000000E+0000
+2
+-End of file-

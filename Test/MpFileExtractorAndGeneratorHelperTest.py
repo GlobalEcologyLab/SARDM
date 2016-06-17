@@ -96,8 +96,8 @@ class TestMetapopConfiguration2 :
     def __init__(self) :
 
         # Configure parameter list in desired order
-        self.parameters = ['Initial Abundance', 'Rmax', 'Carrying Capacity', 'Allee Effect', 'Probability of a Catastrophe 1', 'Local Multiplier 1', 'Stage Multipliers 1',
-                           'Probability of a Catastrophe 2', 'Local Multiplier 2', 'Stage Multipliers 2', 'Dispersal Matrix', 'Correlation Matrix', 'Fecundity Rates',
+        self.parameters = ['Initial Abundance', 'Rmax', 'Carrying Capacity', 'Allee Effect', 'Probability of a Catastrophe 1', 'Local Multiplier 1', 'Stage Multiplier 1',
+                           'Probability of a Catastrophe 2', 'Local Multiplier 2', 'Stage Multiplier 2', 'Dispersal Matrix', 'Correlation Matrix', 'Fecundity Rates',
                            'Survival Rates', 'Environmental Variation']
 
         # Configure parameter mapping to MP file.
@@ -159,9 +159,9 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['options']['Local Multiplier 1']['density_dependence_type_per_population'] = { 'from_line' : 45, 'lines' : 'populations', 'values' : 'line.split(\',\')[4]' }
         self.parameter_mapping['options']['Local Multiplier 1']['catastrophe_extent'] = { 'line' : 13, 'value' : 'line.strip()' }
         self.parameter_mapping['options']['Local Multiplier 1']['catastrophe_affects'] = { 'line' : 14, 'value_list' : 'line.strip().split(\',\')' }
-        self.parameter_mapping['options']['Stage Multipliers 1'] = {}
-        self.parameter_mapping['options']['Stage Multipliers 1']['catastrophe_extent'] = { 'line' : 13, 'value' : 'line.strip()' }
-        self.parameter_mapping['options']['Stage Multipliers 1']['catastrophe_affects'] = { 'line' : 14, 'value_list' : 'line.strip().split(\',\')' }
+        self.parameter_mapping['options']['Stage Multiplier 1'] = {}
+        self.parameter_mapping['options']['Stage Multiplier 1']['catastrophe_extent'] = { 'line' : 13, 'value' : 'line.strip()' }
+        self.parameter_mapping['options']['Stage Multiplier 1']['catastrophe_affects'] = { 'line' : 14, 'value_list' : 'line.strip().split(\',\')' }
         self.parameter_mapping['options']['Probability of a Catastrophe 2'] = {}
         self.parameter_mapping['options']['Probability of a Catastrophe 2']['density_dependence_type_population_specific'] = { 'line' : 33, 'value' : 'line.split()[0]' }
         self.parameter_mapping['options']['Probability of a Catastrophe 2']['density_dependence_type_for_all'] = { 'from_line' : 34, 'lines' : 1, 'values' : 'line.split()[0]' }
@@ -174,9 +174,9 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['options']['Local Multiplier 2']['density_dependence_type_per_population'] = { 'from_line' : 45, 'lines' : 'populations', 'values' : 'line.split(\',\')[4]' }
         self.parameter_mapping['options']['Local Multiplier 2']['catastrophe_extent'] = { 'line' : 20, 'value' : 'line.strip()' }
         self.parameter_mapping['options']['Local Multiplier 2']['catastrophe_affects'] = { 'line' : 21, 'value_list' : 'line.strip().split(\',\')' }
-        self.parameter_mapping['options']['Stage Multipliers 2'] = {}
-        self.parameter_mapping['options']['Stage Multipliers 2']['catastrophe_extent'] = { 'line' : 20, 'value' : 'line.strip()' }
-        self.parameter_mapping['options']['Stage Multipliers 2']['catastrophe_affects'] = { 'line' : 21, 'value_list' : 'line.strip().split(\',\')' }
+        self.parameter_mapping['options']['Stage Multiplier 2'] = {}
+        self.parameter_mapping['options']['Stage Multiplier 2']['catastrophe_extent'] = { 'line' : 20, 'value' : 'line.strip()' }
+        self.parameter_mapping['options']['Stage Multiplier 2']['catastrophe_affects'] = { 'line' : 21, 'value_list' : 'line.strip().split(\',\')' }
         self.parameter_mapping['options']['Probability of a Catastrophe 1 other extent'] = {}
         self.parameter_mapping['options']['Probability of a Catastrophe 1 other extent']['catastrophe_extent'] = { 'line' : 13, 'value' : 'line.strip()' }
         self.parameter_mapping['options']['Probability of a Catastrophe 2 other extent'] = {}
@@ -193,19 +193,19 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 1']['Local'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'max', 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 13, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 1']['Correlated'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'max', 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 13, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 1']['Regional'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'max', 'number_rows' : 1, 'number_columns' : 1, 'start_row' : 12, 'start_column' : 1, 'delimiter' : ',' }
-        self.parameter_mapping['alternatives']['Stage Multipliers 1'] = {}
-        self.parameter_mapping['alternatives']['Stage Multipliers 1']['option'] = 'catastrophe_affects'
-        self.parameter_mapping['alternatives']['Stage Multipliers 1']['Abundances'] = { 'mask_values' : [1], 'number_rows' : 1, 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+2*lifestages+2', 'start_column' : 1, 'delimiter' : ' ' }
-        self.parameter_mapping['alternatives']['Stage Multipliers 1']['Vital Rates'] = { 'mask_values' : [1], 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+lifestages+2', 'start_column' : 1, 'delimiter' : ' ' }
+        self.parameter_mapping['alternatives']['Stage Multiplier 1'] = {}
+        self.parameter_mapping['alternatives']['Stage Multiplier 1']['option'] = 'catastrophe_affects'
+        self.parameter_mapping['alternatives']['Stage Multiplier 1']['Abundances'] = { 'mask_values' : [1], 'number_rows' : 1, 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+2*lifestages+2', 'start_column' : 1, 'delimiter' : ' ' }
+        self.parameter_mapping['alternatives']['Stage Multiplier 1']['Vital Rates'] = { 'mask_values' : [1], 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+lifestages+2', 'start_column' : 1, 'delimiter' : ' ' }
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2'] = {}
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2']['option'] = 'catastrophe_extent'
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2']['Local'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'max', 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 20, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2']['Correlated'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'max', 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 20, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2']['Regional'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'max', 'number_rows' : 1, 'number_columns' : 1, 'start_row' : 19, 'start_column' : 1, 'delimiter' : ',' }
-        self.parameter_mapping['alternatives']['Stage Multipliers 2'] = {}
-        self.parameter_mapping['alternatives']['Stage Multipliers 2']['option'] = 'catastrophe_affects'
-        self.parameter_mapping['alternatives']['Stage Multipliers 2']['Abundances'] = { 'mask_values' : [1], 'number_rows' : 1, 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+3*lifestages+3', 'start_column' : 1, 'delimiter' : ' ' }
-        self.parameter_mapping['alternatives']['Stage Multipliers 2']['Vital Rates'] = { 'mask_values' : [1], 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+2*lifestages+3', 'start_column' : 1, 'delimiter' : ' ' }
+        self.parameter_mapping['alternatives']['Stage Multiplier 2'] = {}
+        self.parameter_mapping['alternatives']['Stage Multiplier 2']['option'] = 'catastrophe_affects'
+        self.parameter_mapping['alternatives']['Stage Multiplier 2']['Abundances'] = { 'mask_values' : [1], 'number_rows' : 1, 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+3*lifestages+3', 'start_column' : 1, 'delimiter' : ' ' }
+        self.parameter_mapping['alternatives']['Stage Multiplier 2']['Vital Rates'] = { 'mask_values' : [1], 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+2*lifestages+3', 'start_column' : 1, 'delimiter' : ' ' }
         self.parameter_mapping['alternatives']['Dispersal Matrix'] = {}
         self.parameter_mapping['alternatives']['Dispersal Matrix']['option'] = 'uses_function'
         self.parameter_mapping['alternatives']['Dispersal Matrix']['FALSE'] = { 'number_rows' : 'populations', 'number_columns' : 'populations', 'start_row' : 'migration_label_line+3', 'start_column' : 1, 'delimiter' : ',' }
@@ -226,7 +226,7 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2 other extent']['Regional'] = { 'may_link_to_temporal_trend_files' : True, 'copy_files' : True, 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 20, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Fecundity Rates'] = {}
         self.parameter_mapping['alternatives']['Fecundity Rates']['option'] = 'sex_structure'
-        fecundity_rates_submatrix_mask = { 'partition' : 'diagonal_upper_right', 'rows' : 'first', 'include_diagonal' : False }
+        fecundity_rates_submatrix_mask = { 'partition' : 'diagonal_upper_right', 'rows' : 'first', 'include_diagonal' : True }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
@@ -236,7 +236,7 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['alternatives']['Fecundity Rates']['TwoSexes']['Polyandrous'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'quadrants' : { 'divide_at' : 'female_stages', 'upper_right' : fecundity_rates_submatrix_mask, 'lower_right' : fecundity_rates_submatrix_mask } } }
         self.parameter_mapping['alternatives']['Survival Rates'] = {}
         self.parameter_mapping['alternatives']['Survival Rates']['option'] = 'sex_structure'
-        survival_rates_submatrix_mask = { 'partition' : 'diagonal_lower_left', 'rows' : 'all', 'include_diagonal' : True }
+        survival_rates_submatrix_mask = { 'partition' : 'diagonal_lower_left', 'rows' : 'below_first', 'include_diagonal' : True }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
@@ -287,11 +287,11 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['alternatives']['conditions']['Local Multiplier 1']['postcondition'][True]['Local'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates', 'Carrying Capacities', 'Dispersal Rates'], 'match_none' : [], 'satisfied' : False }
         self.parameter_mapping['alternatives']['conditions']['Local Multiplier 1']['postcondition'][True]['Correlated'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates', 'Carrying Capacities', 'Dispersal Rates'], 'match_none' : [], 'satisfied' : False }
         self.parameter_mapping['alternatives']['conditions']['Local Multiplier 1']['postcondition'][True]['Regional'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates', 'Carrying Capacities', 'Dispersal Rates'], 'match_none' : [], 'satisfied' : False }
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 1'] = {}
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 1']['option'] = 'catastrophe_extent'
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 1']['Local'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 1']['Correlated'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 1']['Regional'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 1'] = {}
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 1']['option'] = 'catastrophe_extent'
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 1']['Local'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 1']['Correlated'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 1']['Regional'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
         self.parameter_mapping['alternatives']['conditions']['Probability of a Catastrophe 2'] = {}
         self.parameter_mapping['alternatives']['conditions']['Probability of a Catastrophe 2']['precondition'] = {}
         self.parameter_mapping['alternatives']['conditions']['Probability of a Catastrophe 2']['precondition']['option'] = 'density_dependence_type_population_specific'
@@ -322,21 +322,21 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['alternatives']['conditions']['Local Multiplier 2']['postcondition'][True]['Local'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates', 'Carrying Capacities', 'Dispersal Rates'], 'match_none' : [], 'satisfied' : False }
         self.parameter_mapping['alternatives']['conditions']['Local Multiplier 2']['postcondition'][True]['Correlated'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates', 'Carrying Capacities', 'Dispersal Rates'], 'match_none' : [], 'satisfied' : False }
         self.parameter_mapping['alternatives']['conditions']['Local Multiplier 2']['postcondition'][True]['Regional'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates', 'Carrying Capacities', 'Dispersal Rates'], 'match_none' : [], 'satisfied' : False }
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 2'] = {}
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 2']['option'] = 'catastrophe_extent'
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 2']['Local'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 2']['Correlated'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
-        self.parameter_mapping['alternatives']['conditions']['Stage Multipliers 2']['Regional'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 2'] = {}
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 2']['option'] = 'catastrophe_extent'
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 2']['Local'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 2']['Correlated'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
+        self.parameter_mapping['alternatives']['conditions']['Stage Multiplier 2']['Regional'] = { 'option' : 'catastrophe_affects', 'values' : [], 'match_any' : ['Abundances', 'Vital Rates'], 'match_none' : [], 'satisfied' : False }
         self.parameter_mapping['conditions'] = {}
         self.parameter_mapping['conditions']['Rmax'] = { 'choose_alternative' : True }
         self.parameter_mapping['conditions']['Carrying Capacity'] = { 'choose_alternative' : True }
         self.parameter_mapping['conditions']['Allee Effect'] = { 'choose_alternative' : True }
         self.parameter_mapping['conditions']['Probability of a Catastrophe 1'] = { 'choose_alternative' : True }
         self.parameter_mapping['conditions']['Local Multiplier 1'] = { 'choose_alternative' : True }
-        self.parameter_mapping['conditions']['Stage Multipliers 1'] = { 'choose_alternative' : True }
+        self.parameter_mapping['conditions']['Stage Multiplier 1'] = { 'choose_alternative' : True }
         self.parameter_mapping['conditions']['Probability of a Catastrophe 2'] = { 'choose_alternative' : True }
         self.parameter_mapping['conditions']['Local Multiplier 2'] = { 'choose_alternative' : True }
-        self.parameter_mapping['conditions']['Stage Multipliers 2'] = { 'choose_alternative' : True }
+        self.parameter_mapping['conditions']['Stage Multiplier 2'] = { 'choose_alternative' : True }
         self.parameter_mapping['conditions']['Dispersal Matrix'] = { 'condition' : 'populations > 1', 'satisfied' : False }
         self.parameter_mapping['conditions']['Correlation Matrix'] = { 'condition' : 'populations > 1', 'satisfied' : False }
         self.parameter_mapping['additional'] = {}
@@ -361,10 +361,10 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['Allee Effect'] = { 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 9, 'delimiter' : ',' }
         self.parameter_mapping['Probability of a Catastrophe 1'] = { 'choose_alternative' : True }
         self.parameter_mapping['Local Multiplier 1'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'first', 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 12, 'delimiter' : ',' }
-        self.parameter_mapping['Stage Multipliers 1'] = { 'choose_alternative' : True }
+        self.parameter_mapping['Stage Multiplier 1'] = { 'choose_alternative' : True }
         self.parameter_mapping['Probability of a Catastrophe 2'] = { 'choose_alternative' : True }
         self.parameter_mapping['Local Multiplier 2'] = { 'may_link_to_temporal_trend_files' : True, 'use_file_value' : 'first', 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 19, 'delimiter' : ',' }
-        self.parameter_mapping['Stage Multipliers 2'] = { 'choose_alternative' : True }
+        self.parameter_mapping['Stage Multiplier 2'] = { 'choose_alternative' : True }
         self.parameter_mapping['Dispersal Matrix'] = { 'choose_alternative' : True }
         self.parameter_mapping['Correlation Matrix'] = { 'choose_alternative' : True }
         self.parameter_mapping['Stage Matrix'] = { 'sectioned' : True, 'layers' : 'stage_matrix_types', 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'stage_matrix_label_line+5', 'next_layer' : '4+lifestages', 'start_column' : 1, 'delimiter' : ' ' }
@@ -392,10 +392,10 @@ class TestMetapopConfiguration2 :
         self.parameter_output_format['Allee Effect'] = { 'short_heading' : 'Allee', 'mp_format' : '%d', 'output_file_heading' : ['Allee', 'Effect', ''], 'output_file_format' : '%FWd', 'output_file_percent_format' : '%FWd%%' }
         self.parameter_output_format['Probability of a Catastrophe 1'] = { 'short_heading' : 'ProbCat1', 'mp_format' : '%.5f', 'output_file_heading' : ['Probability', 'Catastrophe', '1'], 'output_file_format' : '%FW.5f', 'output_file_percent_format' : '%FW.1f%%' }
         self.parameter_output_format['Local Multiplier 1'] = { 'short_heading' : 'LocMult1', 'mp_format' : '%.3f', 'output_file_heading' : ['Local', 'Multiplier', '1'], 'output_file_format' : '%FW.3f', 'output_file_percent_format' : '%FW.1f%%' }
-        self.parameter_output_format['Stage Multipliers 1'] = { 'short_heading' : 'StgMult1', 'mp_format' : '%.6f', 'output_file_heading' : ['Stage', 'Multipliers', '1'], 'output_file_format' : '%FW.3f', 'output_file_percent_format' : '%FW.1f%%' }
+        self.parameter_output_format['Stage Multiplier 1'] = { 'short_heading' : 'StgMult1', 'mp_format' : '%.6f', 'output_file_heading' : ['Stage', 'Multipliers', '1'], 'output_file_format' : '%FW.3f', 'output_file_percent_format' : '%FW.1f%%' }
         self.parameter_output_format['Probability of a Catastrophe 2'] = { 'short_heading' : 'ProbCat2', 'mp_format' : '%.5f', 'output_file_heading' : ['Probability', 'Catastrophe', '2'], 'output_file_format' : '%FW.5f', 'output_file_percent_format' : '%FW.1f%%' }
         self.parameter_output_format['Local Multiplier 2'] = { 'short_heading' : 'LocMult2', 'mp_format' : '%.3f', 'output_file_heading' : ['Local', 'Multiplier', '2'], 'output_file_format' : '%FW.3f', 'output_file_percent_format' : '%FW.1f%%' }
-        self.parameter_output_format['Stage Multipliers 2'] = { 'short_heading' : 'StgMult2', 'mp_format' : '%.6f', 'output_file_heading' : ['Stage', 'Multipliers', '2'], 'output_file_format' : '%FW.3f', 'output_file_percent_format' : '%FW.1f%%' }
+        self.parameter_output_format['Stage Multiplier 2'] = { 'short_heading' : 'StgMult2', 'mp_format' : '%.6f', 'output_file_heading' : ['Stage', 'Multipliers', '2'], 'output_file_format' : '%FW.3f', 'output_file_percent_format' : '%FW.1f%%' }
         self.parameter_output_format['Dispersal Matrix'] = { 'short_heading' : 'Disp', 'mp_format' : '%.5f', 'output_file_heading' : ['Dispersal', 'Matrix', ''], 'output_file_format' : '%FW.3f', 'output_file_percent_format' : '%FW.1f%%' }
         self.parameter_output_format['Stage Matrix'] = { 'mp_format' : '%.9f' }
         self.parameter_output_format['Fecundity Rates'] = { 'short_heading' : 'Fecund', 'mp_format' : '%.9f', 'output_file_heading' : ['Fecundity', 'Rates', ''], 'output_file_format' : '%FW.5f', 'output_file_percent_format' : '%FW.3f%%' }
@@ -417,13 +417,13 @@ class TestMetapopConfiguration2 :
         self.parameter_result_input['Allee Effect'] = 'first_value'
         self.parameter_result_input['Probability of a Catastrophe 1'] = 'unique_or_percent'
         self.parameter_result_input['Local Multiplier 1'] = 'unique_or_percent'
-        self.parameter_result_input['Stage Multipliers 1'] = 'unique_or_percent'
+        self.parameter_result_input['Stage Multiplier 1'] = 'unique_or_percent'
         self.parameter_result_input['Probability of a Catastrophe 2'] = 'unique_or_percent'
         self.parameter_result_input['Local Multiplier 2'] = 'unique_or_percent'
-        self.parameter_result_input['Stage Multipliers 2'] = 'unique_or_percent'
+        self.parameter_result_input['Stage Multiplier 2'] = 'unique_or_percent'
         self.parameter_result_input['Dispersal Matrix'] = 'percent_change'
         self.parameter_result_input['Correlation Matrix'] = 'percent_change'
-        self.parameter_result_input['Fecundity Rates'] = 'last_non_zero'
+        self.parameter_result_input['Fecundity Rates'] = 'unique_or_percent' # was 'last_non_zero'
         self.parameter_result_input['Survival Rates'] = ['min_non_zero', 'max']
         self.parameter_result_input['Environmental Variation'] = 'percent_change'
 
@@ -431,7 +431,7 @@ class TestMetapopConfiguration2 :
         self.file_generation_numbering_format = '_%04d' # generates numbering from _0001
         
         # Configure the local disk location of the RAMAS Metapop program
-        self.metapop_exe_location = r'C:\Program Files\RAMASGIS\Metapop.exe'
+        self.metapop_exe_location = r'H:\La Trobe Lecturing\Collaborations\GlobalEcologyGroup-Lab\RAMAS-Metapop\Metapop.exe'
 
         # Configure selection of results collected in the desired presentation order
         self.metapop_results = ['Expected Minimum Abundance', 'Final number of occupied patches', 'Final N for persistent runs', 'Total extinction risk', 'Quasi extinction risk']
@@ -602,9 +602,9 @@ generated_mp_file_name = mp_file_helper1.generateModifiedMpFile(modified_paramet
 #     * The conditional extraction or function-based generation of matrices for Dispersal Matrix and Correlation Matrix
 #     NEW for case studies:
 #     * The conditional inclusion of Dispersal Matrix and Correlation Matrix when populations > 1
-#     * The conditional inclusion of Probability of a Catastrophe, Local Multiplier, and Stage Multipliers (1 and 2)
+#     * The conditional inclusion of Probability of a Catastrophe, Local Multiplier, and Stage Multiplier (1 and 2)
 #       dependent on catastrophe Extent (Local/Correlated/Regional) and Affects (Abundances/Vital Rates/Carrying Capacities/Dispersal Rates)
-#     * The conditional extraction of Probability of a Catastrophe and Stage Multipliers (1 and 2) dependent on Extent and Affects
+#     * The conditional extraction of Probability of a Catastrophe and Stage Multiplier (1 and 2) dependent on Extent and Affects
 #     * The conditional extraction of the temporal trend and other filenames required, including: user defined functions (.DLL);
 #       relative fecundity (.FCH); relative survival (.SCH); relative dispersal (.DCH); temporal trend in K (.KCH);
 #       relative variability-fecundity (.VCH); relative variability-survival (.VCH); catastrophe probability (.PCH);
@@ -641,7 +641,7 @@ for index, example_file in enumerate(example_files) :
     # Extract baseline parameter values
     baseline_parameter_values = mp_file_helper2.extractParametersFromMpFileContents()
     print '\nExtracted parameters for ' + example_file + ':', baseline_parameter_values.keys()
-    for parameter in ['Stage Multipliers 1', 'Stage Multipliers 2'] : #['Fecundity Rates', 'Survival Rates'] : #baseline_parameter_values.keys() :
+    for parameter in ['Stage Multiplier 1', 'Stage Multiplier 2'] : #['Fecundity Rates', 'Survival Rates'] : #baseline_parameter_values.keys() :
         #print 'mapping:', mp_file_helper2.parameter_mapping[parameter]
         if baseline_parameter_values.has_key(parameter) :
             print parameter, ' = '
@@ -724,6 +724,9 @@ for index, example_file in enumerate(example_files) :
     copied_linked_files = mp_file_helper2.copyUnmodifiedLinkedFiles()
     print 'Unmodified linked files copied to', output_dir_path, '\n', copied_linked_files
 
+    print "Press any key to continue *************************************************************************************************************"
+    test = raw_input()
+
 # END TEST 1
 
 # TEST 2: Data frame generation. Check that:
@@ -766,9 +769,9 @@ mp_file_helper1.generateDataFrameFile()
 print '\nTEST 3: Metapop batch generation'
 
 # Generate MP batch entries
-mp_file_helper2.generateMpBatchEntry('SandLizard_modified_0001.mp', 1)
-mp_file_helper2.generateMpBatchEntry('SandLizard_modified_0002.mp', 2)
-mp_file_helper2.generateMpBatchEntry('SandLizard_modified_0003.mp', 3)
+mp_file_helper2.generateMpBatchEntry('SandLizard_1_modified_0001.mp', 1)
+mp_file_helper2.generateMpBatchEntry('SandLizard_1_modified_0002.mp', 2)
+mp_file_helper2.generateMpBatchEntry('SandLizard_1_modified_0003.mp', 3)
 
 # Generate MP batch file
 mp_file_helper2.output_directory['name'] = 'BatchTest'
@@ -807,22 +810,22 @@ print 'Loaded example data: ', mp_file_helper1.generation_data
 
 # END TEST 4
 
- TEST 5: Load Metapop Results. Check that:
- a) Collects an ordered list of the required result files in their generic form
- b) Appropriate warning when generation_data.dat missing
- c) Appropriate warning when batch results missing
- d) Result extraction:
-    i)     Result components are correctly extracted from result files
-    ii)    Results are correctly calculated from result components
-    iii)   Results are correctly extracted from multi-run result files
- e) Appropriate warning when batch results incomplete
- f) No warning when successfully loaded results
- g) Handle division by zero if total extinction risk = 1 when calculating final N for persistent runs
- h) Handle case when the first threshold value > 0 in IntExtRisk result file (total extinction risk = 0)
- i) Handle other quasi-extinction risk extraction cases:
-    i)     Quasi-extinction threshold falls below minimum threshold value in IntExtRisk result file (quasi-ext-risk = 0)
-    ii)    Quasi-extinction threshold falls above maximum threshold value in IntExtRisk result file (quasi-ext-risk = 1)
-    iii)   Quasi-extinction threshold falls between threshold values in IntExtRisk result file (linear interpolate)
+## TEST 5: Load Metapop Results. Check that:
+## a) Collects an ordered list of the required result files in their generic form
+## b) Appropriate warning when generation_data.dat missing
+## c) Appropriate warning when batch results missing
+## d) Result extraction:
+##    i)     Result components are correctly extracted from result files
+##    ii)    Results are correctly calculated from result components
+##    iii)   Results are correctly extracted from multi-run result files
+## e) Appropriate warning when batch results incomplete
+## f) No warning when successfully loaded results
+## g) Handle division by zero if total extinction risk = 1 when calculating final N for persistent runs
+## h) Handle case when the first threshold value > 0 in IntExtRisk result file (total extinction risk = 0)
+## i) Handle other quasi-extinction risk extraction cases:
+##    i)     Quasi-extinction threshold falls below minimum threshold value in IntExtRisk result file (quasi-ext-risk = 0)
+##    ii)    Quasi-extinction threshold falls above maximum threshold value in IntExtRisk result file (quasi-ext-risk = 1)
+##    iii)   Quasi-extinction threshold falls between threshold values in IntExtRisk result file (linear interpolate)
 
 print '\nTEST 5: Load Metapop Results'
 

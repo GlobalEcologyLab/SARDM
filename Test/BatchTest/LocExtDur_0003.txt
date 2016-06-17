@@ -1,0 +1,23 @@
+METAPOPULATION MODEL results; Date=16/06/2016 Time=12:39:25
+===========================================================
+Sandlizard8Pop20IntroYr0-2Disp10x
+Sand lizard, site FL-data, scen. II in Berglind, S-A. 2000. Ecol. Bull. 48: 123-142,  8 populations, 5 ha each, 
+contest density dependence, K = 60 females/ha (incl. hatchlings) x 5 ha = 300, density dependent dispersal, 
+initial pop. size (yr 0) = 20 (introduced) 0-yr olds, introduction of 0-yr olds during yr 1-2, ca 10 times higher 
+dispersal rate than the basic model. ## MODIFIED BY DF ON THE 20/07/2013 FOR SENSITIVITY ANALYSIS EXAMPLE
+    8 populations (8 included in summation)
+ 1000 replications;  Duration = 50
+===========================================================
+
+Local extinction duration (Duration = 50 time steps)
+
+Population             Number of Time Steps
+                   Minimum    -1 S.D.    Average    +1 S.D.    Maximum
+ 1 Pop 1.......        0.0       -3.9        2.5        8.8       43.0
+ 2 Pop 2.......        0.0       -3.5        1.8        7.2       43.0
+ 3 Pop 3.......        0.0       -3.7        2.0        7.7       41.0
+ 4 Pop 4.......        0.0       -3.0        1.5        6.0       37.0
+ 5 Pop 5.......        0.0       -3.9        2.6        9.1       40.0
+ 6 Pop 6.......        0.0       -3.7        2.6        9.0       42.0
+ 7 Pop 7.......        0.0       -3.9        3.1       10.1       46.0
+ 8 Pop 8.......        0.0       -3.9        2.9        9.7       45.0

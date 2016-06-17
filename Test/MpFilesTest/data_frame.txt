@@ -1,0 +1,10 @@
+Modified MP file            Matrix 1       Matrix 2  
+                                                     
+                                                     
+dummy_filename_1.mp            0.200          90.0%  
+dummy_filename_2.mp            1.600 *       120.0% *
+dummy_filename_2b.mp           1.600 *       120.0% *
+
+* Parameter values outside of constraints:
+  - Matrix 1: values greater than 1; column sums greater than 1
+  - Matrix 2: values greater than 1; column sums greater than 1

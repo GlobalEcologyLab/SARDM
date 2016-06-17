@@ -1,0 +1,16 @@
+Key                         Parameter
+                                          
+ Inputs:                                  
+   InitN                 Initial Abundance
+    Rmax                              Rmax
+   Capac                 Carrying Capacity
+  Fecund                   Fecundity Rates
+    Surv                    Survival Rates
+  EnvVar           Environmental Variation
+                                          
+Outputs:                                  
+     EMA        Expected Minimum Abundance
+FinalOcc  Final number of occupied patches
+  FinalN       Final N for persistent runs
+     Ext             Total extinction risk
+QuasiExt             Quasi extinction risk
