@@ -102,6 +102,7 @@ class TestMetapopConfiguration2 :
 
         # Configure parameter mapping to MP file.
         # * Dynamic variables define mappings to variables within the MP file needed to define parameter mappings.
+        # * Subset masks define masks for when parameters are subsets of a sectioned matrix.
         # * Options define extracted values that alter the way parameters are processed.
         # * Alternatives define different extraction specifications dependent on options.
         # * Conditions for parameter inclusion defines a pattern match for a specified line or list of options.
@@ -123,6 +124,9 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['dynamic_variables']['end_of_file_line'] = { 'pattern' : '^-End of file-', 'value' : 'line' }
         self.parameter_mapping['search_for_dynamic_variables_from_row'] = 7 # ignore comment rows
         self.parameter_mapping['omit_results_from_mp_template'] = { 'omit' : True, 'from_line' : 'simulation_results_line', 'to_line' : 'end_of_file_line-1' }
+        self.parameter_mapping['subset_masks'] = {}
+        self.parameter_mapping['subset_masks']['Fecundity Rates'] = { 'inverse' : True, 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+1', 'start_column' : 1, 'delimiter' : ' ' }
+        self.parameter_mapping['subset_masks']['Survival Rates'] = { 'inverse' : False, 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+1', 'start_column' : 1, 'delimiter' : ' ' }
         self.parameter_mapping['options'] = {}
         self.parameter_mapping['options']['Dispersal Matrix'] = {}
         self.parameter_mapping['options']['Dispersal Matrix']['uses_function'] = { 'line' : 'migration_label_line+1', 'value' : 'line.split()[0]' }
@@ -226,7 +230,7 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2 other extent']['Regional'] = { 'may_link_to_temporal_trend_files' : True, 'copy_files' : True, 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 20, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Fecundity Rates'] = {}
         self.parameter_mapping['alternatives']['Fecundity Rates']['option'] = 'sex_structure'
-        fecundity_rates_submatrix_mask = { 'partition' : 'diagonal_upper_right', 'rows' : 'first', 'include_diagonal' : True }
+        fecundity_rates_submatrix_mask = { 'rows' : 'first' }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
@@ -236,7 +240,7 @@ class TestMetapopConfiguration2 :
         self.parameter_mapping['alternatives']['Fecundity Rates']['TwoSexes']['Polyandrous'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'quadrants' : { 'divide_at' : 'female_stages', 'upper_right' : fecundity_rates_submatrix_mask, 'lower_right' : fecundity_rates_submatrix_mask } } }
         self.parameter_mapping['alternatives']['Survival Rates'] = {}
         self.parameter_mapping['alternatives']['Survival Rates']['option'] = 'sex_structure'
-        survival_rates_submatrix_mask = { 'partition' : 'diagonal_lower_left', 'rows' : 'below_first', 'include_diagonal' : True }
+        survival_rates_submatrix_mask = { 'rows' : 'all' }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
@@ -619,15 +623,16 @@ example_files = ['SandLizard_baseline_1.mp', 'SandLizard_baseline_1a.mp', 'SandL
                  r'TemporalTrendTest\SandLizard_temporal_trends-1.mp', r'TemporalTrendTest\SandLizard_temporal_trends-2.mp',
                  r'CaseStudies\Abalone\KI_Rubra_ModelV2.mp', r'CaseStudies\Abalone\KI_Rubra_ModelV2_males.mp', r'CaseStudies\Abalone\KI_Rubra_ModelV2_mixed.mp',
                  r'CaseStudies\GCB\KI_GBC.mp', r'CaseStudies\GCB\KI_GBC_Polygynous.mp', r'CaseStudies\GCB\KI_GBC_Polyandrous.mp',
-                 r'CaseStudies\Abalone\KI_Rubra_ModelV2.mp', r'CaseStudies\GCB\KI_GBC.mp', r'CaseStudies\Orangutan\OrangSinglePop.mp',
-                 r'CaseStudies\Turtle\TurtleMetapopNorthern.mp', r'CaseStudies\Turtle\TurtleMetapopSouthern.mp']
+                 r'CaseStudies\Orangutan\OrangSinglePop.mp', r'CaseStudies\Turtle\TurtleMetapopNorthern.mp', r'CaseStudies\Turtle\TurtleMetapopSouthern.mp',
+                 r'Forest_SensitivityAnalysis.mp']
+example_files = [r'Forest_SensitivityAnalysis.mp']
 for index, example_file in enumerate(example_files) :
 
     # Load baseline mp file
     mp_file_path = test_directory + '\\' + example_file
     mp_file_helper2.loadBaselineMpFile(mp_file_path)
 
-    if index == 0 : 
+    if index == 0 :
         # Resolve dynamic MP parameter mapping configuration
         print '\nParameter mapping configuration prior to resolution of dynamic mapping: '
         print mp_file_helper2.config.parameter_mapping
@@ -641,7 +646,7 @@ for index, example_file in enumerate(example_files) :
     # Extract baseline parameter values
     baseline_parameter_values = mp_file_helper2.extractParametersFromMpFileContents()
     print '\nExtracted parameters for ' + example_file + ':', baseline_parameter_values.keys()
-    for parameter in ['Stage Multiplier 1', 'Stage Multiplier 2'] : #['Fecundity Rates', 'Survival Rates'] : #baseline_parameter_values.keys() :
+    for parameter in ['Fecundity Rates', 'Survival Rates'] : #['Fecundity Rates', 'Survival Rates'] : ['Stage Multiplier 1', 'Stage Multiplier 2'] #baseline_parameter_values.keys() :
         #print 'mapping:', mp_file_helper2.parameter_mapping[parameter]
         if baseline_parameter_values.has_key(parameter) :
             print parameter, ' = '
@@ -1065,6 +1070,3 @@ for result_file in listdir(mp_file_helper2.results_directory['path']) :
         print '  ', result_file, 'generated'
 
 # END Main program
-
-
-

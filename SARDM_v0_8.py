@@ -103,6 +103,9 @@ class MetapopConfiguration :
         self.parameter_mapping['dynamic_variables']['end_of_file_line'] = { 'pattern' : '^-End of file-', 'value' : 'line' }
         self.parameter_mapping['search_for_dynamic_variables_from_row'] = 7 # ignore comment rows
         self.parameter_mapping['omit_results_from_mp_template'] = { 'omit' : True, 'from_line' : 'simulation_results_line', 'to_line' : 'end_of_file_line-1' }
+        self.parameter_mapping['subset_masks'] = {}
+        self.parameter_mapping['subset_masks']['Fecundity Rates'] = { 'inverse' : True, 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+1', 'start_column' : 1, 'delimiter' : ' ' }
+        self.parameter_mapping['subset_masks']['Survival Rates'] = { 'inverse' : False, 'number_rows' : 'lifestages', 'number_columns' : 'lifestages', 'start_row' : 'constraints_matrix_label_line+1', 'start_column' : 1, 'delimiter' : ' ' }
         self.parameter_mapping['options'] = {}
         self.parameter_mapping['options']['Dispersal Matrix'] = {}
         self.parameter_mapping['options']['Dispersal Matrix']['uses_function'] = { 'line' : 'migration_label_line+1', 'value' : 'line.split()[0]' }
@@ -206,7 +209,7 @@ class MetapopConfiguration :
         self.parameter_mapping['alternatives']['Probability of a Catastrophe 2 other extent']['Regional'] = { 'may_link_to_temporal_trend_files' : True, 'copy_files' : True, 'number_rows' : 'populations', 'number_columns' : 1, 'start_row' : 45, 'start_column' : 20, 'delimiter' : ',' }
         self.parameter_mapping['alternatives']['Fecundity Rates'] = {}
         self.parameter_mapping['alternatives']['Fecundity Rates']['option'] = 'sex_structure'
-        fecundity_rates_submatrix_mask = { 'partition' : 'diagonal_upper_right', 'rows' : 'first', 'include_diagonal' : True }
+        fecundity_rates_submatrix_mask = { 'rows' : 'first' }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Fecundity Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : fecundity_rates_submatrix_mask } }
@@ -216,7 +219,7 @@ class MetapopConfiguration :
         self.parameter_mapping['alternatives']['Fecundity Rates']['TwoSexes']['Polyandrous'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'quadrants' : { 'divide_at' : 'female_stages', 'upper_right' : fecundity_rates_submatrix_mask, 'lower_right' : fecundity_rates_submatrix_mask } } }
         self.parameter_mapping['alternatives']['Survival Rates'] = {}
         self.parameter_mapping['alternatives']['Survival Rates']['option'] = 'sex_structure'
-        survival_rates_submatrix_mask = { 'partition' : 'diagonal_lower_left', 'rows' : 'below_first', 'include_diagonal' : True }
+        survival_rates_submatrix_mask = { 'rows' : 'all' }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyFemale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['OnlyMale'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
         self.parameter_mapping['alternatives']['Survival Rates']['AllIndividuals'] = { 'subset_of' : 'Stage Matrix', 'subset_mask' : { 'whole_matrix' : survival_rates_submatrix_mask } }
@@ -5195,7 +5198,7 @@ class ApplicationGUI(tk.Frame) :
 ## Main program
 
 application_name = 'SARDM'
-application_version = 'v0.7'
+application_version = 'v0.8'
 application_longname = 'SARDM: Sensitivity Analysis of Range Dynamics Models'
 
 # Set user application data directory

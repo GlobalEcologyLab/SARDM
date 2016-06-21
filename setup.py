@@ -15,5 +15,5 @@ data_files = matplotlib.get_py2exe_datafiles()
 data_files.append(("Microsoft.VC90.CRT", glob(r'C:\Users\shaythorne\Dropbox\GlobalEcology\PythonResources\Microsoft.VC90.CRT\*.*')))
 setup(
     data_files=data_files,
-    windows=['SARDM_v0_7.py'],
+    windows=['SARDM_v0_8.py'],
 )

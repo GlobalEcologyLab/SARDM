@@ -256,7 +256,19 @@ class MpFileExtractorAndGeneratorHelper :
                                 if self.parameter_mapping[parameter_key].has_key('use_file_value') :
                                     self.parameter_file_links[parameter_key]['use_file_value'] = self.parameter_mapping[parameter_key]['use_file_value']
                 if self.parameter_mapping[parameter_key].has_key('subset_of') and self.parameter_mapping[parameter_key].has_key('subset_mask') :
-                    subset_mask = self.resolveSubsetMask(parameter_key, value_matrix)
+                    if len(value_matrix.shape) == 3 : # layered
+                        subset_mask_matrix = np.ones_like(value_matrix[0])
+                    else :
+                        subset_mask_matrix = np.ones_like(value_matrix)
+                    if self.parameter_mapping.has_key('subset_masks') and self.parameter_mapping['subset_masks'].has_key(parameter_key) :
+                        subset_mask_matrix = self.extractMatrixFromFileLines(self.baseline_mp_file['lines'], self.parameter_mapping['subset_masks'][parameter_key])
+                        if self.parameter_mapping['subset_masks'][parameter_key].has_key('inverse') and self.parameter_mapping['subset_masks'][parameter_key]['inverse'] :
+                            subset_mask_matrix = subset_mask_matrix*-1+1
+                    subset_mask = self.resolveSubsetMask(parameter_key, subset_mask_matrix)
+                    if len(value_matrix.shape) == 3 : # layered
+                        mask = subset_mask
+                        subset_mask = np.ones_like(value_matrix)
+                        subset_mask[:] = mask
                     value_matrix *= subset_mask
                 if self.parameter_mapping[parameter_key].has_key('mask_values') :
                     value_mask = np.ones_like(value_matrix)
@@ -305,60 +317,45 @@ class MpFileExtractorAndGeneratorHelper :
         return parameter_values
 
     # Method resolves subset mask using parameter mapping
-    def resolveSubsetMask(self, parameter_key, value_matrix) :
-        mapping = self.parameter_mapping[parameter_key]#['subset_mask']
-        subset_mask = np.zeros_like(value_matrix)
+    def resolveSubsetMask(self, parameter_key, subset_mask_matrix) :
+        subset_mask = np.zeros_like(subset_mask_matrix)
+        mapping = self.parameter_mapping[parameter_key]
         if mapping['subset_mask'].has_key('whole_matrix') :
             subset_mask = self.resolveSubmatrixMask(subset_mask, mapping['subset_mask']['whole_matrix'])
         elif mapping['subset_mask'].has_key('quadrants') and mapping['subset_mask']['quadrants'].has_key('divide_at') :
             divider = mapping['subset_mask']['quadrants']['divide_at']
-            if len(subset_mask.shape) == 3 :
-                mask = subset_mask[0]
-            else :
-                mask = subset_mask
             if mapping['subset_mask']['quadrants'].has_key('upper_left') :
-                mask[:divider,:divider] = self.resolveSubmatrixMask(mask[:divider,:divider], mapping['subset_mask']['quadrants']['upper_left'])
+                subset_mask[:divider,:divider] = self.resolveSubmatrixMask(subset_mask[:divider,:divider], mapping['subset_mask']['quadrants']['upper_left'])
             if mapping['subset_mask']['quadrants'].has_key('lower_left') :
-                mask[divider:,:divider] = self.resolveSubmatrixMask(mask[divider:,:divider], mapping['subset_mask']['quadrants']['lower_left'])
+                subset_mask[divider:,:divider] = self.resolveSubmatrixMask(subset_mask[divider:,:divider], mapping['subset_mask']['quadrants']['lower_left'])
             if mapping['subset_mask']['quadrants'].has_key('upper_right') :
-                mask[:divider,divider:] = self.resolveSubmatrixMask(mask[:divider,divider:], mapping['subset_mask']['quadrants']['upper_right'])
+                subset_mask[:divider,divider:] = self.resolveSubmatrixMask(subset_mask[:divider,divider:], mapping['subset_mask']['quadrants']['upper_right'])
             if mapping['subset_mask']['quadrants'].has_key('lower_right') :
-                mask[divider:,divider:] = self.resolveSubmatrixMask(mask[divider:,divider:], mapping['subset_mask']['quadrants']['lower_right'])
-            if len(subset_mask.shape) == 3 :
-               subset_mask[:] = mask
-        return subset_mask
+                subset_mask[divider:,divider:] = self.resolveSubmatrixMask(subset_mask[divider:,divider:], mapping['subset_mask']['quadrants']['lower_right'])
+        return subset_mask*subset_mask_matrix
 
     # Method resolves a submatrix mask
-    def resolveSubmatrixMask(self, submatrix, submatrix_mask_mapping) :
+    def resolveSubmatrixMask(self, submatrix_mask, submatrix_mask_mapping) :
 
-        # Zero 2D mask
-        if len(submatrix.shape) == 3 : # layered
-            mask = np.zeros_like(submatrix[0])
-        else :
-            mask = np.zeros_like(submatrix)
-        row_mask = mask.copy()
-
-        # Diagonal mask
-        if submatrix_mask_mapping['include_diagonal'] :
-            mask += np.eye(N=mask.shape[0], M=mask.shape[1], k=0)
-        for i in np.arange(1, max(mask.shape)) :
-            if submatrix_mask_mapping['partition'] is 'diagonal_upper_right' :
-                mask += np.eye(N=mask.shape[0], M=mask.shape[1], k=i)
-            elif submatrix_mask_mapping['partition'] is 'diagonal_lower_left' :
-                mask += np.eye(N=mask.shape[0], M=mask.shape[1], k=-1*i)
+        # Partition mask
+        if submatrix_mask_mapping.has_key('partition') :
+            if submatrix_mask_mapping.has_key('include_diagonal') and submatrix_mask_mapping['include_diagonal'] :
+                submatrix_mask += np.eye(N=submatrix_mask.shape[0], M=submatrix_mask.shape[1], k=0)
+            for i in np.arange(1, max(submatrix_mask.shape)) :
+                if submatrix_mask_mapping['partition'] is 'diagonal_upper_right' :
+                    submatrix_mask += np.eye(N=submatrix_mask.shape[0], M=submatrix_mask.shape[1], k=i)
+                elif submatrix_mask_mapping['partition'] is 'diagonal_lower_left' :
+                    submatrix_mask += np.eye(N=submatrix_mask.shape[0], M=submatrix_mask.shape[1], k=-1*i)
 
         # Row inclusion mask
-        if submatrix_mask_mapping['rows'] is 'first' :
-            row_mask[0,:] = 1
-        elif submatrix_mask_mapping['rows'] is 'all' :
-            row_mask[:,:] = 1
-        elif submatrix_mask_mapping['rows'] is 'below_first' :
-            row_mask[1:,:] = 1
+        if submatrix_mask_mapping.has_key('rows') :
+            if submatrix_mask_mapping['rows'] is 'first' :
+                submatrix_mask[0,:] = 1
+            elif submatrix_mask_mapping['rows'] is 'all' :
+                submatrix_mask[:,:] = 1
+            elif submatrix_mask_mapping['rows'] is 'below_first' :
+                submatrix_mask[1:,:] = 1
 
-        # Combine masks and return (layered) mask
-        mask *= row_mask
-        submatrix_mask = np.zeros_like(submatrix)
-        submatrix_mask[:] = mask
         return submatrix_mask
 
     # Method checks to see if file links exist
@@ -536,6 +533,13 @@ class MpFileExtractorAndGeneratorHelper :
                     self.parameter_mapping[parameter_key][key] = eval(value)
                 elif key is 'subset_mask' and value.has_key('quadrants') and value['quadrants'].has_key('divide_at') :
                     self.parameter_mapping[parameter_key]['subset_mask']['quadrants']['divide_at'] = eval(value['quadrants']['divide_at'])
+
+        # Insert the dynamic variable values into the parameter subset mask MP mapping configuration
+        if self.parameter_mapping.has_key('subset_masks') :
+            for parameter_key in self.parameter_mapping['subset_masks'].keys() :
+                for key, value in self.parameter_mapping['subset_masks'][parameter_key].items() :
+                    if key in ['number_rows', 'number_columns', 'start_row', 'start_column'] and type(value) == str :
+                        self.parameter_mapping['subset_masks'][parameter_key][key] = eval(value)
 
         # Insert the dynamic variable values into any additional parameter MP mapping configuration
         if self.parameter_mapping.has_key('additional') :
